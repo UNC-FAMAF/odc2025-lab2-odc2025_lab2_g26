@@ -245,13 +245,228 @@ edificio:
 
 stp x29, x30, [sp, #-16]!   // guardás el frame anterior y x30
 mov x29, sp                 // nuevo frame pointer
+
+//:::::::::::::::::::::::::::::::::::::
+//::    CARTEL ODC 2025              ::
+//:::::::::::::::::::::::::::::::::::::
+
+//////////// CARTEL ///////////////
+
+    // Color gris
+
+// ===== RECTÁNGULO CONTENEDOR =====
+mov x1, #345       // x
+mov x2, #48        // y (nuevo valor)
+mov x3, #90        // ancho
+mov x4, #40        // alto
+movz x10, 0xFFFF, lsl 16
+movk x10, 0xFFD6, lsl 0
+bl rectangulo
+
+
+movz x10, 0xFF30, lsl 16
+movk x10, 0x0020, lsl 0
+// ===== LETRA O =====
+
+mov x1, #360
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #372
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #363
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #363
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+
+// ===== LETRA D =====
+mov x1, #380
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #383
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #383
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #392
+mov x2, #56
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+
+// ===== LETRA C =====
+mov x1, #400
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #403
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #403
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+// ===== NÚMERO 2 =====
+mov x1, #360
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #369
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #360
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 0 =====
+mov x1, #375
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #387
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #378
+mov x2, #68
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #375
+mov x2, #80
+mov x3, #15
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 2 =====
+mov x1, #395
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #404
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #395
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 5 =====
+mov x1, #410
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #410
+mov x2, #68
+mov x3, #3
+mov x4, #6
+bl rectangulo
+
+mov x1, #410
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #419
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #410
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
 	//:::::::rectangulo principal:::::::::::::::::::
 
 	mov x0, x20              // framebuffer base                        ::
     mov x1, #300             // coordenada X (Esquina superior izq)     ::
-    mov x2, #90              // coordenada Y (esquina superior izq)     ::
+    mov x2, #100              // coordenada Y (esquina superior izq)     ::
     mov x3, #150              // ancho                                   ::
-    mov x4, #270              // altura                                  ::
+    mov x4, #260              // altura                                  ::
     movz x10, 0xFF11, lsl 16  // parte alta del color                    ::
     movk x10, 0x1111, lsl 0   // parte baja del color                    ::
     bl rectangulo   
@@ -260,8 +475,8 @@ mov x29, sp                 // nuevo frame pointer
 
     //soporte
 
-    mov x1, #350             // coordenada X (Esquina superior izq)     ::
-    mov x2, #75              // coordenada Y (esquina superior izq)     ::
+    mov x1, #330             // coordenada X (Esquina superior izq)     ::
+    mov x2, #85              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF11, lsl 16  // parte alta del color                    ::
@@ -269,8 +484,8 @@ mov x29, sp                 // nuevo frame pointer
     bl rectangulo   
 
     //antena
-    mov x1, #355             // coordenada X (Esquina superior izq)     ::
-    mov x2, #60              // coordenada Y (esquina superior izq)     ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
+    mov x2, #70              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
@@ -284,8 +499,8 @@ mov x29, sp                 // nuevo frame pointer
     movk x10, 0x0000, lsl 0       // parte baja del color (ej. gris)                ::
 
 
-    mov x3, #356                  // coordenada X del centro                        ::
-    mov x16, #60                 // coordenada Y del centro                        ::
+    mov x3, #336                  // coordenada X del centro                        ::
+    mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
     mov x7, #4                   // radio vertical (radY)                          ::
     bl circulo                    // llamada a función   

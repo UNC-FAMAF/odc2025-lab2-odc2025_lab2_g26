@@ -1152,4 +1152,734 @@ interior:
 
     bl rectangulo
 
+
+.global gatito
+
+gatito:
+    
+      // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 120               // Coordenada X
+    mov x2, 344           // Coordenada Y
+    mov x3, 60                // Ancho
+    mov x4, 28               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 124               // Coordenada X
+    mov x2, 340           // Coordenada Y
+    mov x3, 52               // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 128               // Coordenada X
+    mov x2, 332          // Coordenada Y
+    mov x3, 52               // Ancho
+    mov x4, 8               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 132               // Coordenada X
+    mov x2, 328          // Coordenada Y
+    mov x3, 48               // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 136               // Coordenada X
+    mov x2, 319          // Coordenada Y
+    mov x3, 44               // Ancho
+    mov x4, 8               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 140               // Coordenada X
+    mov x2, 315          // Coordenada Y
+    mov x3, 12              // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+    
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148               // Coordenada X
+    mov x2, 311          // Coordenada Y
+    mov x3, 24              // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148               // Coordenada X
+    mov x2, 303          // Coordenada Y
+    mov x3, 24              // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 152               // Coordenada X
+    mov x2, 307          // Coordenada Y
+    mov x3, 20             // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 144              // Coordenada X
+    mov x2, 279         // Coordenada Y
+    mov x3, 44             // Ancho
+    mov x4, 24               // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148              // Coordenada X
+    mov x2, 275        // Coordenada Y
+    mov x3, 44            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+      // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148              // Coordenada X
+    mov x2, 271        // Coordenada Y
+    mov x3, 12            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148              // Coordenada X
+    mov x2, 267        // Coordenada Y
+    mov x3, 8            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148              // Coordenada X
+    mov x2, 263        // Coordenada Y
+    mov x3, 4            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 180             // Coordenada X
+    mov x2, 271        // Coordenada Y
+    mov x3, 12            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+    
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 184            // Coordenada X
+    mov x2, 267        // Coordenada Y
+    mov x3, 8            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+     
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 188            // Coordenada X
+    mov x2, 263        // Coordenada Y
+    mov x3, 4           // Ancho
+    mov x4, 36              // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 180             // Coordenada X
+    mov x2, 279        // Coordenada Y
+    mov x3, 12            // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 124              // Coordenada X
+    mov x2, 372           // Coordenada Y
+    mov x3, 56                // Ancho
+    mov x4, 8              // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 128              // Coordenada X
+    mov x2, 380          // Coordenada Y
+    mov x3, 52               // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 132              // Coordenada X
+    mov x2, 384          // Coordenada Y
+    mov x3, 40               // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 140              // Coordenada X
+    mov x2, 388          // Coordenada Y
+    mov x3, 28              // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 148              // Coordenada X
+    mov x2, 392          // Coordenada Y
+    mov x3, 8             // Ancho
+    mov x4, 8            // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 152              // Coordenada X
+    mov x2, 400          // Coordenada Y
+    mov x3, 8             // Ancho
+    mov x4, 4           // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 156              // Coordenada X
+    mov x2, 404         // Coordenada Y
+    mov x3, 8            // Ancho
+    mov x4, 6           // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 160              // Coordenada X
+    mov x2, 408         // Coordenada Y
+    mov x3, 8            // Ancho
+    mov x4, 12           // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 156              // Coordenada X
+    mov x2, 420         // Coordenada Y
+    mov x3, 8            // Ancho
+    mov x4, 6           // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 152              // Coordenada X
+    mov x2, 424        // Coordenada Y
+    mov x3, 12            // Ancho
+    mov x4, 6           // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 140            // Coordenada X
+    mov x2, 426       // Coordenada Y
+    mov x3, 4            // Ancho
+    mov x4, 4          // Alto
+    bl rectangulo
+
+      // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 140            // Coordenada X
+    mov x2, 430       // Coordenada Y
+    mov x3, 18            // Ancho
+    mov x4, 4          // Alto
+    bl rectangulo
+
+
+
+
+// PANZA GRIS:
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 124             // Coordenada X
+    mov x2, 352               // Coordenada Y
+    mov x3, 4               // Ancho
+    mov x4, 8               // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 128           // Coordenada X
+    mov x2, 348              // Coordenada Y
+    mov x3, 28          // Ancho
+    mov x4, 16               // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 132            // Coordenada X
+    mov x2, 344               // Coordenada Y
+    mov x3, 36        // Ancho
+    mov x4, 16             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 124             // Coordenada X
+    mov x2, 356             // Coordenada Y
+    mov x3, 52               // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 140            // Coordenada X
+    mov x2, 340               // Coordenada Y
+    mov x3, 20       // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+      // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 169            // Coordenada X
+    mov x2, 348               // Coordenada Y
+    mov x3, 3     // Ancho
+    mov x4, 12             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 132             // Coordenada X
+    mov x2, 365            // Coordenada Yh
+    mov x3, 7             // Ancho
+    mov x4, 4              // Alto
+    bl rectangulo
+
+    
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 144             // Coordenada X
+    mov x2, 364            // Coordenada Y
+    mov x3, 7             // Ancho
+    mov x4, 4               // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 148             // Coordenada X
+    mov x2, 364            // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8               // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 160             // Coordenada X
+    mov x2, 360            // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8               // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 164             // Coordenada X
+    mov x2, 364            // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 168             // Coordenada X
+    mov x2, 360            // Coordenada Y
+    mov x3, 3            // Ancho
+    mov x4, 2              // Alto
+    bl rectangulo
+
+      // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE DERECHO 1
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 177           // Coordenada X
+    mov x2, 319               // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 33             // Alto
+    bl rectangulo
+
+      // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 173            // Coordenada X
+    mov x2, 303              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 33             // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 174            // Coordenada X
+    mov x2, 303              // Coordenada Y
+    mov x3, 8      // Ancho
+    mov x4, 8             // Alto
+    bl rectangulo
+
+      // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 180            // Coordenada X
+    mov x2, 295              // Coordenada Y
+    mov x3, 8       // Ancho
+    mov x4, 8             // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 185            // Coordenada X
+    mov x2, 287              // Coordenada Y
+    mov x3, 3       // Ancho
+    mov x4, 8             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 182           // Coordenada X
+    mov x2, 283              // Coordenada Y
+    mov x3, 3       // Ancho
+    mov x4, 8             // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 178           // Coordenada X
+    mov x2, 283              // Coordenada Y
+    mov x3, 3       // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 154           // Coordenada X
+    mov x2, 279              // Coordenada Y
+    mov x3, 28       // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 150           // Coordenada X
+    mov x2, 283              // Coordenada Y
+    mov x3, 8       // Ancho
+    mov x4, 3           // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 150           // Coordenada X
+    mov x2, 286              // Coordenada Y
+    mov x3, 4       // Ancho
+    mov x4, 3           // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 169           // Coordenada X
+    mov x2, 311              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 13             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 153           // Coordenada X
+    mov x2, 315              // Coordenada Y
+    mov x3, 16        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 145           // Coordenada X
+    mov x2, 319             // Coordenada Y
+    mov x3, 26        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 141           // Coordenada X
+    mov x2, 323             // Coordenada Y
+    mov x3, 20        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 167           // Coordenada X
+    mov x2, 323             // Coordenada Y
+    mov x3, 12        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 159           // Coordenada X
+    mov x2, 327             // Coordenada Y
+    mov x3, 12        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 138           // Coordenada X
+    mov x2, 327             // Coordenada Y
+    mov x3, 12        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+       // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 134           // Coordenada X
+    mov x2, 331            // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE 
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 169            // Coordenada X
+    mov x2, 328              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C) BORDE DERECHO ABAJO #2
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 181           // Coordenada X
+    mov x2, 350              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 30             // Alto
+    bl rectangulo
+
+//COLA
+     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 176           // Coordenada X
+    mov x2, 372              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 12             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 172           // Coordenada X
+    mov x2, 380              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 8             // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 168           // Coordenada X
+    mov x2, 384              // Coordenada Y
+    mov x3, 4        // Ancho
+    mov x4, 4             // Alto
+    bl rectangulo
+
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 152              // Coordenada X
+    mov x2, 388          // Coordenada Y
+    mov x3, 16              // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+  //cola gris
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 152              // Coordenada X
+    mov x2, 384          // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+    
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 156              // Coordenada X
+    mov x2, 392          // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8            // Alto
+    bl rectangulo
+
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 160              // Coordenada X
+    mov x2, 398        // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 164              // Coordenada X
+    mov x2, 402        // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 168              // Coordenada X
+    mov x2, 410        // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 12            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 164              // Coordenada X
+    mov x2, 422        // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 156              // Coordenada X
+    mov x2, 430        // Coordenada Y
+    mov x3, 8             // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 140              // Coordenada X
+    mov x2, 434       // Coordenada Y
+    mov x3, 16             // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 136              // Coordenada X
+    mov x2, 426        // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 8            // Alto
+    bl rectangulo
+
+ //VELA !!
+
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 248              // Coordenada X
+    mov x2, 371        // Coordenada Y
+    mov x3, 36            // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 252              // Coordenada X
+    mov x2, 375        // Coordenada Y
+    mov x3, 28            // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+    ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
+    mov x1, 256              // Coordenada X
+    mov x2, 379        // Coordenada Y
+    mov x3, 20            // Ancho
+    mov x4, 4            // Alto
+    bl rectangulo
+
+    // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 256             // Coordenada X
+    mov x2, 371         // Coordenada Y
+    mov x3, 20            // Ancho
+    mov x4, 4           // Alto
+    bl rectangulo
+
+     // Rectángulo NEGRO (0x00000000)
+    movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
+    movk x10, 0x0000, lsl 00   // Verde + Azul (00)
+    mov x1, 260             // Coordenada X
+    mov x2, 375        // Coordenada Y
+    mov x3, 12            // Ancho
+    mov x4, 4           // Alto
+    bl rectangulo
+
+    // Rectángulo gris medio
+    ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
+    mov x1, 260             // Coordenada X
+    mov x2, 355       // Coordenada Y
+    mov x3, 12             // Ancho
+    mov x4, 20            // Alto
+    bl rectangulo
+
+
+     // Rectángulo gris medio
+    ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
+    mov x1, 264             // Coordenada X
+    mov x2, 351      // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 4           // Alto
+    bl rectangulo
+
+    // Rectángulo amarillo
+    ldr x10, =0x80FFFF00  // ARGB: A=128 (50%), R=255, G=255, B=0
+    mov x1, 264             // Coordenada X
+    mov x2, 348      // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 4           // Alto
+    bl rectangulo
+
+     // Rectángulo amarillo
+    ldr x10, =0x80FFFF00  // ARGB: A=128 (50%), R=255, G=255, B=0
+    mov x1, 260             // Coordenada X
+    mov x2, 343      // Coordenada Y
+    mov x3, 4             // Ancho
+    mov x4, 4           // Alto
+    bl rectangulo
+
     

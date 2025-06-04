@@ -294,25 +294,25 @@ bl rectangulo
 
 
 // ===== LETRA D =====
-mov x1, #380
+mov x1, #386
 mov x2, #53
 mov x3, #3
 mov x4, #10
 bl rectangulo
 
-mov x1, #383
+mov x1, #389
 mov x2, #53
 mov x3, #9
 mov x4, #3
 bl rectangulo
 
-mov x1, #383
+mov x1, #389
 mov x2, #60
 mov x3, #9
 mov x4, #3
 bl rectangulo
 
-mov x1, #392
+mov x1, #398
 mov x2, #56
 mov x3, #3
 mov x4, #4
@@ -320,19 +320,19 @@ bl rectangulo
 
 
 // ===== LETRA C =====
-mov x1, #400
+mov x1, #410
 mov x2, #53
 mov x3, #3
 mov x4, #10
 bl rectangulo
 
-mov x1, #403
+mov x1, #413
 mov x2, #53
 mov x3, #9
 mov x4, #3
 bl rectangulo
 
-mov x1, #403
+mov x1, #413
 mov x2, #60
 mov x3, #9
 mov x4, #3

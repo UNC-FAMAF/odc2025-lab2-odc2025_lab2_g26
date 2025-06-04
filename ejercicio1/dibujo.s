@@ -993,89 +993,142 @@ bl rectangulo
 ldp x29, x30, [sp], #16     // restaurás lo que guardaste
 ret                         // ahora sí, volvé tranquilo
 
-
-
-
  
- .globl interior
+    .globl interior
 
 interior:
 
-
-//::::::::::::::: marco vertical izq::::::::::::::::::::::
-
-    mov x1, #95         // X inicio (ajustado)
-    mov x2, #40         // Y inicio (mismo)
-    mov x3, #16   // ancho (+8 píxeles)
-    mov x4, #328        // altura (igual)
-    movz x10, 0xff00, lsl 16     // color parte alta
-    movk x10, 0x00 
-
-	bl rectangulo
-
-//::::::::::::::: marco vertical der::::::::::::::::::::::
-
-    mov x1, #450         // X inicio (ajustado)
-    mov x2, #40         // Y inicio (mismo)
-    mov x3, #16   // ancho (+8 píxeles)
-    mov x4, #328        // altura (igual)
-    movz x10, 0xff00, lsl 16     // color parte alta
-    movk x10, 0x00 
+//::::::::::::::::: PARED :::::::::::::::::::::::::::::
+                
+    mov x1, #0          // X inicio (ajustado)
+    mov x2, #0         // Y inicio (mismo)
+    mov x3, #640      // ancho (+8 píxeles)
+    mov x4, #480        // altura (igual)
+    movz x10, 0xff02, lsl 16     // color parte alta
+    movk x10, 0x1823 
 
 	bl rectangulo
 
-//::::::::::::::: marco vertical sup::::::::::::::::::::::
-
-    mov x1, #95         // X inicio (ajustado)
-    mov x2, #34         // Y inicio (mismo)
-    mov x3, #371   // ancho (+8 píxeles)
-    mov x4, #16        // altura (igual)
-    movz x10, 0xff00, lsl 16     // color parte alta
-    movk x10, 0x00 
-
-	bl rectangulo
-
-//::::::::::::::: marco vertical inf::::::::::::::::::::::
-
-    mov x1, #95         // X inicio (ajustado)
-    mov x2, #360         // Y inicio (mismo)
-    mov x3, #371   // ancho (+8 píxeles)
-    mov x4, #16        // altura (igual)
-    movz x10, 0xff00, lsl 16     // color parte alta
-    movk x10, 0x00 
+//:::::::::::::::: SEGUNDA PARED :::::::::::::
+    
+                
+    mov x1, #50         // X inicio (ajustado)
+    mov x2, #0         // Y inicio (mismo)
+    mov x3, #450   // ancho (+8 píxeles)
+    mov x4, #480        // altura (igual)
+    movz x10, 0xff01, lsl 16     // color parte alta
+    movk x10, 0x2233 
 
 	bl rectangulo
+
+//::::::::::::::::::::::::::::::::::::::::://
+//		 VENTANA 		   //	
+//::::::::::::::::::::::::::::::::::::::::://
+
+//:::::::::: marco sup :::::::::::::::
+
+mov x1, #84	// x inicio
+mov x2, #24	// y inicio
+mov x3, #382	// ancho
+mov x4, #16	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+
+bl rectangulo
+//::::::::: marco inf ::::::::::::::
+
+mov x1, #84	// x inicio
+mov x2, #360	// y inicio
+mov x3, #382	// ancho
+mov x4, #16	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+
+bl rectangulo
+//::::::::::: marco izq ::::::::::::
+
+mov x1, #84	// x inicio
+mov x2, #40	// y inicio
+mov x3, #16	// ancho
+mov x4, #320	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+
+bl rectangulo
+//::::::::::: marco der ::::::::::::
+
+mov x1, #450	// x inicio
+mov x2, #40	// y inicio
+mov x3, #16	// ancho
+mov x4, #320	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+
+bl rectangulo
+
+//:::::::: relleno marco sup ::::::::::::::
+
+mov x1, #88	// x inicio
+mov x2, #28	// y inicio
+mov x3, #374	// ancho
+mov x4, #8	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x4262, lsl 0
+
+bl rectangulo
+
+//::::::::: relleno marco inf :::::::::::::
+
+mov x1, #88	// x inicio
+mov x2, #364	// y inicio
+mov x3, #374	// ancho
+mov x4, #8	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x4262, lsl 0
+
+bl rectangulo
+
+//:::::::: relleno marco izq ::::::::::
+
+mov x1, #88	// x inicio
+mov x2, #36	// y inicio
+mov x3, #8	// ancho
+mov x4, #328	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x4262, lsl 0
+
+bl rectangulo
+
+//:::::::: relleno marco der ::::::::::
+
+
+mov x1, #454	// x inicio
+mov x2, #36	// y inicio
+mov x3, #8	// ancho
+mov x4, #328	// altura
+movz x10, 0xFF00, lsl 16
+movk x10, 0x4262, lsl 0
+
+bl rectangulo
 
 //:::::::::::: marco cruz :::::::::::::::::::.
 
 	            
-    mov x1, #265    // X inicio
+    mov x1, #267    // X inicio
     mov x2, #36 // Y inicio
-    mov x3, #20  // ancho
+    mov x3, #16  // ancho
     mov x4, #328     // altura
     movz x10, 0xFF00, lsl 16     //Gis oscuro
     movk x10, 0x0000 
 
     bl rectangulo
 
-//:::::::::::::::::: cruz ventana:::::::::::::::::::
-
-	            
-    mov x1, #270    // X inicio
-    mov x2, #36 // Y inicio
-    mov x3, #10  // ancho
-    mov x4, #328     // altura
-    movz x10, 0xFF00, lsl 16     //Gis oscuro
-    movk x10, 0x4262 
-
-    bl rectangulo
-
 //:::::::::::: marco cruz :::::::::::::::::::.
 
 	            
-    mov x1, #100    // X inicio
+    mov x1, #96    // X inicio
     mov x2, #185 // Y inicio
-    mov x3, #350  // ancho
+    mov x3, #358  // ancho
     mov x4, #16     // altura
     movz x10, 0xFF00, lsl 16     //Gis oscuro
     movk x10, 0x0000 
@@ -1084,18 +1137,32 @@ interior:
 
 //:::::::::::::::::: cruz ventana:::::::::::::::::::
 
-    mov x1, #100    // X inicio
+	            
+    mov x1, #271    // X inicio
+    mov x2, #36 // Y inicio
+    mov x3, #8  // ancho
+    mov x4, #328     // altura
+    movz x10, 0xFF00, lsl 16     //Gis oscuro
+    movk x10, 0x4262 
+
+    bl rectangulo
+
+
+//:::::::::::::::::: cruz ventana:::::::::::::::::::
+
+    mov x1, #96    // X inicio
     mov x2, #189 // Y inicio
-    mov x3, #350  // ancho
+    mov x3, #358  // ancho
     mov x4, #8     // altura
     movz x10, 0xFF00, lsl 16     //Gis oscuro
     movk x10, 0x4262 
 
     bl rectangulo
-    
-//::::::::::::::::::::::::::::::::::::::::://
-//::::::::::::: CALENDARIO :::::::::::::::://
-//::::::::::::::::::::::::::::::::::::::::://
+
+
+
+//::::::::::::: CALENDARIO ::::::::::::::::
+
 	            
     mov x1, #520           // X inicio
     mov x2, #150        // Y inicio
@@ -1151,6 +1218,391 @@ interior:
     movk x10, 0x6269 
 
     bl rectangulo
+
+// ::::::::::: relleno gris :::::::::::
+
+// Rectángulo grande blanco (fondo de los días)
+                
+mov x1, #525             // X: borde interno
+mov x2, #155             // Y: borde interno
+mov x3, #90              // ancho
+mov x4, #65              // alto
+movz x10, 0xFFea, lsl 16    // Color blanco
+movk x10, 0xeaea 
+
+bl rectangulo
+
+//segundo bloque
+
+	            
+    mov x1, #525           // X inicio
+    mov x2, #225      // Y inicio
+    mov x3, #95        // ancho
+    mov x4, #10      // altura
+    movz x10, 0xFFea, lsl 16     //Gis oscuro
+    movk x10, 0xeaea 
+
+bl rectangulo
+
+//tercer bloque
+
+	            
+    mov x1, #525           // X inicio
+    mov x2, #235      // Y inicio
+    mov x3, #100        // ancho
+    mov x4, #4      // altura
+    movz x10, 0xFFcc, lsl 16     //Gis oscuro
+    movk x10, 0xcccc 
+
+bl rectangulo
+
+//cuarto bloque
+
+	            
+    mov x1, #525           // X inicio
+    mov x2, #243      // Y inicio
+    mov x3, #95        // ancho
+    mov x4, #6  // altura
+    movz x10, 0xFFcc, lsl 16     //Gis oscuro
+    movk x10, 0xcccc 
+
+    bl rectangulo
+
+//final
+
+	            
+    mov x1, #528           // X inicio
+    mov x2, #253      // Y inicio
+    mov x3, #87        // ancho
+    mov x4, #6  // altura
+    movz x10, 0xFFcc, lsl 16     //Gis oscuro
+    movk x10, 0xcccc 
+
+    bl rectangulo
+
+
+
+//::::::::::::::::: CUADRICULA :::::::::::::::::::::
+
+//
+
+	            
+    mov x1, #525           // X inicio
+    mov x2, #220 // Y inicio
+    mov x3, #95        // ancho
+    mov x4, #5  // altura
+    movz x10, 0xFFcc, lsl 16     //Gis oscuro
+    movk x10, 0xCCCC 
+
+    bl rectangulo
+
+/////
+// Líneas verticales de la grilla
+ 
+mov x2, #150         // Y fijo
+mov x3, #5           // ancho de la línea
+mov x4, #70         // alto de la línea
+movz x10, 0xFFcc, lsl 16  
+movk x10, 0xCCCC 
+
+mov x1, #538
+mov x2, #150         // Y fijo
+bl rectangulo
+
+mov x1, #558
+mov x2, #150         // Y fijo
+
+bl rectangulo
+
+mov x1, #578
+mov x2, #150         // Y fijo
+
+bl rectangulo
+
+mov x1, #598
+mov x2, #150         // Y fijo
+
+bl rectangulo
+
+ 
+mov x2, #225         // Y fijo
+mov x3, #5           // ancho de la línea
+mov x4, #10         // alto de la línea
+movz x10, 0xFFcc, lsl 16  
+movk x10, 0xCCCC 
+
+mov x1, #543
+mov x2, #225         // Y fijo
+
+bl rectangulo
+
+mov x1, #563
+mov x2, #225         // Y fijo
+
+bl rectangulo
+
+mov x1, #583
+mov x2, #225         // Y fijo
+
+bl rectangulo
+
+mov x1, #603
+mov x2, #225         // Y fijo
+
+bl rectangulo
+
+
+// Líneas horizontales de la grilla
+ 
+mov x1, #525         // X fijo
+mov x3, #90         // ancho de la línea
+mov x4, #5           // alto de la línea
+movz x10, 0xFFcc, lsl 16  
+movk x10, 0xCCCC 
+
+mov x2, #160
+bl rectangulo
+
+mov x2, #180
+bl rectangulo
+
+mov x2, #200
+bl rectangulo
+
+//::::::: EJEMPLO DE paralelogramo ::::::::::::::::::::
+//ldr x10, =0xFF00FFFF    // Color (violeta claro)
+//mov x1, 250             // X inicial
+//mov x2, 100             // Y inicial
+//mov x3, 6               // Largo (horizontal)
+//mov x4, 6               // Alto (vertical)
+//bl paralelogramo_izq
+
+//::::::::::::: RELOJ :::::::::::::::::::::::::::::::::::               
+movz x10, 0xFF80, lsl 16      // parte alta del color (ej. gris)                
+movk x10, 0x8080, lsl 0       // parte baja del color (ej. gris)                
+mov x3, #570                  // coordenada X del centro                        
+mov x16, #80                 // coordenada Y del centro                        
+mov x4, #40                   // radio horizontal (radX)                        
+mov x7, #40                   // radio vertical (radY)                          
+
+bl circulo                    // llamada a función
+
+// marco reloj
+
+movz x10, 0xFFca, lsl 16      // parte alta del color (ej. gris)                
+movk x10, 0xcaca, lsl 0       // parte baja del color (ej. gris)                
+mov x3, #570                  // coordenada X del centro                        
+mov x16, #80                 // coordenada Y del centro                        
+mov x4, #35                   // radio horizontal (radX)                        
+mov x7, #35                   // radio vertical (radY)                          
+
+bl circulo                    // llamada a función
+
+// centro reloj
+
+mov x3, #4         // ancho de la línea
+mov x4, #4           // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+
+mov x1, #569
+mov x2, #79
+bl rectangulo
+
+// hora reloj
+
+mov x3, #2         // ancho de la línea
+mov x4, #2           // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+
+//12
+mov x1, #569
+mov x2, #49
+bl rectangulo
+
+// 6
+mov x1, #569
+mov x2, #109
+bl rectangulo
+
+//9
+mov x1, #539
+mov x2, #79
+bl rectangulo
+
+//3
+mov x1, #599
+mov x2, #79
+bl rectangulo
+
+// minutos reloj
+
+mov x3, #1         // ancho de la línea
+mov x4, #1           // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+
+// 45
+mov x1, #548
+mov x2, #98
+bl rectangulo
+//30
+mov x1, #591
+mov x2, #98
+bl rectangulo
+//0
+mov x1, #548
+mov x2, #60
+bl rectangulo
+//15
+mov x1, #591
+mov x2, #60
+bl rectangulo
+
+////// debajo ventana ///////////////////
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+mov x1, #120
+
+bl rectangulo
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+mov x1, #134
+
+bl rectangulo
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+mov x1, #146
+
+bl rectangulo
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+mov x1, #158
+
+bl rectangulo
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+mov x1, #170
+
+bl rectangulo
+
+mov x2, #440
+mov x3, #30         // ancho de la línea
+mov x4, #40           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x2837, lsl 0
+mov x1, #182
+
+bl rectangulo
+
+/// estante /////
+
+mov x1, 84             // X inicial
+mov x2, 376             // Y inicial
+mov x3, 382               // Largo (horizontal)
+mov x4, 30               // Alto (vertical)
+ldr x10, =0x024C69    // Color (azul oscuro)
+
+
+bl paralelogramo_izq
+
+///// estante borde inf///////////
+mov x1, #55
+mov x2, #405
+mov x3, #382         // ancho de la línea
+mov x4, #20           // alto de la línea
+movz x10, 0xFF03, lsl 16  
+movk x10, 0x374c, lsl 0
+
+bl rectangulo
+
+// estante borde der//
+mov x1, 84             // X inicial
+mov x2, 376             // Y inicial
+mov x3, 382               // Largo (horizontal)
+mov x4, 30               // Alto (vertical)
+ldr x10, =0x024C69    // Color (azul oscuro)
+
+
+bl paralelogramo_izq
+
+
+/////marco estante /////
+mov x1, #55
+mov x3, #382         // ancho de la línea
+mov x4, #4           // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+
+//marco sup
+mov x2, #405
+bl rectangulo
+//marco inf 
+mov x2, #422
+bl rectangulo
+
+//marco izq
+mov x1, #55
+mov x2, #405
+mov x3, #4         // ancho de la línea
+mov x4, #20           // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//marco der
+
+mov x1, #433
+mov x2, #405
+mov x3, #4         // ancho de la línea
+mov x4, #20           // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//marco izq paralelogramo
+mov x1, 84             // X inicial
+mov x2, 376             // Y inicial
+mov x3, 6               // Largo (horizontal)
+mov x4, 30               // Alto (vertical)
+ldr x10, =0x000000    // Color (violeta claro)
+
+bl paralelogramo_izq
+
+
+mov x1, 462             // X inicial
+mov x2, 376             // Y inicial
+mov x3, 6               // Largo (horizontal)
+mov x4, 30               // Alto (vertical)
+ldr x10, =0x000000    // Color (violeta claro)
+bl paralelogramo_izq
 
 
 .global gatito

@@ -249,9 +249,9 @@ mov x29, sp                 // nuevo frame pointer
 
 	mov x0, x20              // framebuffer base                        ::
     mov x1, #300             // coordenada X (Esquina superior izq)     ::
-    mov x2, #100              // coordenada Y (esquina superior izq)     ::
+    mov x2, #90              // coordenada Y (esquina superior izq)     ::
     mov x3, #150              // ancho                                   ::
-    mov x4, #260              // altura                                  ::
+    mov x4, #270              // altura                                  ::
     movz x10, 0xFF11, lsl 16  // parte alta del color                    ::
     movk x10, 0x1111, lsl 0   // parte baja del color                    ::
     bl rectangulo   
@@ -261,7 +261,7 @@ mov x29, sp                 // nuevo frame pointer
     //soporte
 
     mov x1, #350             // coordenada X (Esquina superior izq)     ::
-    mov x2, #85              // coordenada Y (esquina superior izq)     ::
+    mov x2, #75              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF11, lsl 16  // parte alta del color                    ::
@@ -270,7 +270,7 @@ mov x29, sp                 // nuevo frame pointer
 
     //antena
     mov x1, #355             // coordenada X (Esquina superior izq)     ::
-    mov x2, #70              // coordenada Y (esquina superior izq)     ::
+    mov x2, #60              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
@@ -285,7 +285,7 @@ mov x29, sp                 // nuevo frame pointer
 
 
     mov x3, #356                  // coordenada X del centro                        ::
-    mov x16, #70                 // coordenada Y del centro                        ::
+    mov x16, #60                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
     mov x7, #4                   // radio vertical (radY)                          ::
     bl circulo                    // llamada a función   

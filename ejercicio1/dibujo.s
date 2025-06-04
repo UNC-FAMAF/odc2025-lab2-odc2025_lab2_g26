@@ -459,6 +459,23 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
+//POSTES DEL CARTEL
+
+//Poste 1
+mov x1, #345
+mov x2, #45
+mov x3, #3
+mov x4, #48
+bl rectangulo
+
+//Poste 1
+mov x1, #435
+mov x2, #45
+mov x3, #3
+mov x4, #48
+bl rectangulo
+
+
 
 	//:::::::rectangulo principal:::::::::::::::::::
 

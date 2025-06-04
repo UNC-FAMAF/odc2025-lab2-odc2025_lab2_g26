@@ -93,5 +93,64 @@ interior:
     movk x10, 0x4262 
 
     bl rectangulo
+    
+//::::::::::::::::::::::::::::::::::::::::://
+//::::::::::::: CALENDARIO :::::::::::::::://
+//::::::::::::::::::::::::::::::::::::::::://
+	            
+    mov x1, #520           // X inicio
+    mov x2, #150        // Y inicio
+    mov x3, #100        // ancho
+    mov x4, #100      // altura
+    movz x10, 0xFF59, lsl 16     //Gis oscuro
+    movk x10, 0x6269 
+
+    bl rectangulo
+//primer rectangulo 
+
+	            
+    mov x1, #520           // X inicio
+    mov x2, #220      // Y inicio
+    mov x3, #105        // ancho
+    mov x4, #15     // altura
+    movz x10, 0xFF59, lsl 16     //Gis oscuro
+    movk x10, 0x6269 
+
+    bl rectangulo
+//segundo bloque 
+
+	            
+    mov x1, #520           // X inicio
+    mov x2, #235      // Y inicio
+    mov x3, #110        // ancho
+    mov x4, #8      // altura
+    movz x10, 0xFF59, lsl 16     //Gis oscuro
+    movk x10, 0x6269 
+
+    bl rectangulo
+
+//tercer bloque
+
+	            
+    mov x1, #520           // X inicio
+    mov x2, #243      // Y inicio
+    mov x3, #105        // ancho
+    mov x4, #10  // altura
+    movz x10, 0xFF59, lsl 16     //Gis oscuro
+    movk x10, 0x6269 
+
+    bl rectangulo
+
+//cuarto bloque
+
+	            
+    mov x1, #523           // X inicio
+    mov x2, #253      // Y inicio
+    mov x3, #97      // ancho
+    mov x4, #6 // altura
+    movz x10, 0xFF59, lsl 16     //Gis oscuro
+    movk x10, 0x6269 
+
+    bl rectangulo
 
     

@@ -1,6 +1,30 @@
 .global puente
 puente:
 
+//::::::::::::::::: PARED :::::::::::::::::::::::::::::
+                
+    mov x1, #0          // X inicio (ajustado)
+    mov x2, #0         // Y inicio (mismo)
+    mov x3, #640      // ancho (+8 píxeles)
+    mov x4, #480        // altura (igual)
+    movz x10, 0xff02, lsl 16     // color parte alta
+    movk x10, 0x1823 
+
+	bl rectangulo
+
+//:::::::::::::::: SEGUNDA PARED :::::::::::::
+    
+                
+    mov x1, #50         // X inicio (ajustado)
+    mov x2, #0         // Y inicio (mismo)
+    mov x3, #450   // ancho (+8 píxeles)
+    mov x4, #480        // altura (igual)
+    movz x10, 0xff01, lsl 16     // color parte alta
+    movk x10, 0x2233 
+
+	bl rectangulo
+
+ 
     //:::::::::::::::::::::::::::::::::::
     //::       PUENTE                  ::
     //:::::::::::::::::::::::::::::::::::
@@ -997,29 +1021,6 @@ ret                         // ahora sí, volvé tranquilo
     .globl interior
 
 interior:
-
-//::::::::::::::::: PARED :::::::::::::::::::::::::::::
-                
-    mov x1, #0          // X inicio (ajustado)
-    mov x2, #0         // Y inicio (mismo)
-    mov x3, #640      // ancho (+8 píxeles)
-    mov x4, #480        // altura (igual)
-    movz x10, 0xff02, lsl 16     // color parte alta
-    movk x10, 0x1823 
-
-	bl rectangulo
-
-//:::::::::::::::: SEGUNDA PARED :::::::::::::
-    
-                
-    mov x1, #50         // X inicio (ajustado)
-    mov x2, #0         // Y inicio (mismo)
-    mov x3, #450   // ancho (+8 píxeles)
-    mov x4, #480        // altura (igual)
-    movz x10, 0xff01, lsl 16     // color parte alta
-    movk x10, 0x2233 
-
-	bl rectangulo
 
 //::::::::::::::::::::::::::::::::::::::::://
 //		 VENTANA 		   //	

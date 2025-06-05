@@ -1669,68 +1669,6 @@ mov x1, #591
 mov x2, #60
 bl rectangulo
 
-////// debajo ventana ///////////////////
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-mov x1, #120
-
-bl rectangulo
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-mov x1, #134
-
-bl rectangulo
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-mov x1, #146
-
-bl rectangulo
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-mov x1, #158
-
-bl rectangulo
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-mov x1, #170
-
-bl rectangulo
-
-mov x2, #440
-mov x3, #30         // ancho de la línea
-mov x4, #40           // alto de la línea
-movz x10, 0xFF03, lsl 16  
-movk x10, 0x2837, lsl 0
-mov x1, #182
-
-bl rectangulo
-
 /// estante /////
 
 mov x1, 84             // X inicial

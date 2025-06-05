@@ -1767,7 +1767,7 @@ bl paralelogramo_izq
 
 gatito:
     
-      // Rectángulo NEGRO (0x00000000)
+        // Rectángulo NEGRO (0x00000000)
     movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
     movk x10, 0x0000, lsl 00   // Verde + Azul (00)
     mov x1, 120               // Coordenada X
@@ -2383,7 +2383,7 @@ gatito:
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 164              // Coordenada X
-    mov x2, 422        // Coordenada Y
+    mov x2, 421        // Coordenada Y
     mov x3, 4             // Ancho
     mov x4, 8            // Alto
     bl rectangulo

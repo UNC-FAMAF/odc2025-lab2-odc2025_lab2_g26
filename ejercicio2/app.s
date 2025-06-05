@@ -76,9 +76,9 @@ loop0:
     
 	bl puente 
 	bl edificio
-	bl lluvia
 	bl interior
     bl gatito 
+	bl animacion
 
 
 	//---------------------------------------------------------------
@@ -86,3 +86,4 @@ loop0:
 
 InfLoop:
 	b InfLoop
+

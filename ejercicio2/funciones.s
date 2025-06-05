@@ -403,6 +403,20 @@ draw_rectangle_sombr:
 
     ret
 
+    .global delay
+    delay:
+    // Guardar x0 y x30 (por si delay se llama dentro de otra función)
+    stp x0, x30, [sp, #-16]!  // Guardamos par: x0 original y LR
+
+loop_delay:
+    subs x0, x0, #1           // Decrementa y actualiza flags
+    b.ne loop_delay           // Si no es cero, seguimos
+
+    // Restaurar x0 y x30
+    ldp x0, x30, [sp], #16
+
+    ret
+
 
 
 

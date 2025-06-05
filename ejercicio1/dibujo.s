@@ -1368,7 +1368,940 @@ bl rectangulo
 
     bl rectangulo
 
+//////////////////// EXTRA ABRIL //////////////////////////////
 
+
+//bordes pared izq//
+mov x1, #48
+mov x2, #0
+mov x3, #1        // ancho de la línea
+mov x4, #480          // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//bordes pared der//
+mov x1, #500
+mov x2, #0
+mov x3, #1        // ancho de la línea
+mov x4, #480          // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #160
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #160
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #155
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #160
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #155
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #167
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #172
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #167
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #172
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #172
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #179
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #184
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #179
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #184
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #184
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #191
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #196
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #191
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #196
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #196
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #203
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #208
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #203
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #208
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #208
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #215
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #220
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #215
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #220
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #220
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16  
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #227
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #232
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #227
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #232
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #232
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #244
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #244
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #239
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #244
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #239
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #251
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #256
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #251
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #256
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #256
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #268
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #268
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #263
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #268
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #263
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #275
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #280
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #275
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #280
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #280
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #292
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #292
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #287
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #292
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #287
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #299
+mov x2, #450
+mov x3, #4
+mov x4, #2
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #304
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #299
+mov x2, #450
+mov x3, #2
+mov x4, #30
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #304
+mov x2, #460
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+mov x1, #304
+mov x2, #465
+mov x3, #8
+mov x4, #1
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #304
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #304
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #299
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #304
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #299
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #311
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #316
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #311
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #316
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #316
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #323
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #328
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #323
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #328
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #328
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #335
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #340
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #335
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #340
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #340
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #347
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #352
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #347
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #352
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #352
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #359
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #364
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #359
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #364
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #359
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #364
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #364
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #371
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #376
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #371
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #376
+mov x2, #460
+mov x3, #8     // ancho de la línea
+mov x4, #1         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle PARTE 1//
+mov x1, #376
+mov x2, #465
+mov x3, #8     // ancho de la línea
+mov x4, #1        // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #383
+mov x2, #450
+mov x3, #4     // ancho de la línea
+mov x4, #2         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #388
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+//calefactor abajo o detalle//
+mov x1, #383
+mov x2, #450
+mov x3, #2     // ancho de la línea
+mov x4, #30         // alto de la línea
+movz x10, 0xFF00, lsl 16
+movk x10, 0x0000, lsl 0
+bl rectangulo
+
+
+//////////////////// EXTRA ABRIL FIN //////////////////////////////
 
 //::::::: EJEMPLO DE paralelogramo ::::::::::::::::::::
 //ldr x10, =0xFF00FFFF    // Color (violeta claro)

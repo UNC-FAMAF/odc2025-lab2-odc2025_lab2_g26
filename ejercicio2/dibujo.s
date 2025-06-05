@@ -242,198 +242,6 @@ bl rectangulo
 
 movz x10, 0xFF30, lsl 16
 movk x10, 0x0020, lsl 0
-// ===== LETRA O =====
-
-mov x1, #360
-mov x2, #53
-mov x3, #3
-mov x4, #10
-bl rectangulo
-
-mov x1, #372
-mov x2, #53
-mov x3, #3
-mov x4, #10
-bl rectangulo
-
-mov x1, #363
-mov x2, #53
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-mov x1, #363
-mov x2, #60
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-
-// ===== LETRA D =====
-mov x1, #386
-mov x2, #53
-mov x3, #3
-mov x4, #10
-bl rectangulo
-
-mov x1, #389
-mov x2, #53
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-mov x1, #389
-mov x2, #60
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-mov x1, #398
-mov x2, #56
-mov x3, #3
-mov x4, #4
-bl rectangulo
-
-
-// ===== LETRA C =====
-mov x1, #410
-mov x2, #53
-mov x3, #3
-mov x4, #10
-bl rectangulo
-
-mov x1, #413
-mov x2, #53
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-mov x1, #413
-mov x2, #60
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-// ===== NÚMERO 2 =====
-mov x1, #360
-mov x2, #68
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-mov x1, #369
-mov x2, #71
-mov x3, #3
-mov x4, #4
-bl rectangulo
-
-mov x1, #360
-mov x2, #74
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-mov x1, #360
-mov x2, #77
-mov x3, #3
-mov x4, #4
-bl rectangulo
-
-mov x1, #360
-mov x2, #80
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-
-// ===== NÚMERO 0 =====
-mov x1, #375
-mov x2, #68
-mov x3, #3
-mov x4, #12
-bl rectangulo
-
-mov x1, #387
-mov x2, #68
-mov x3, #3
-mov x4, #12
-bl rectangulo
-
-mov x1, #378
-mov x2, #68
-mov x3, #9
-mov x4, #3
-bl rectangulo
-
-mov x1, #375
-mov x2, #80
-mov x3, #15
-mov x4, #3
-bl rectangulo
-
-
-// ===== NÚMERO 2 =====
-mov x1, #395
-mov x2, #68
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-mov x1, #404
-mov x2, #71
-mov x3, #3
-mov x4, #4
-bl rectangulo
-
-mov x1, #395
-mov x2, #74
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-mov x1, #395
-mov x2, #77
-mov x3, #3
-mov x4, #4
-bl rectangulo
-
-mov x1, #395
-mov x2, #80
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-
-// ===== NÚMERO 5 =====
-mov x1, #410
-mov x2, #68
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-mov x1, #410
-mov x2, #68
-mov x3, #3
-mov x4, #6
-bl rectangulo
-
-mov x1, #410
-mov x2, #74
-mov x3, #12
-mov x4, #3
-bl rectangulo
-
-mov x1, #419
-mov x2, #77
-mov x3, #3
-mov x4, #4
-bl rectangulo
-
-mov x1, #410
-mov x2, #80
-mov x3, #12
-mov x4, #3
-bl rectangulo
 
 //POSTES DEL CARTEL
 
@@ -2724,7 +2532,205 @@ loop_animacion:
     mov x7, #4                   // radio vertical (radY)                          ::
     movz x10, 0xFFFF, lsl 16      // parte alta del color (ej. gris)                ::
     movk x10, 0x0000, lsl 0  
-    bl circulo                    // llamada a función   
+    bl circulo                    // llamada a función  
+
+    //::::::::::::::::::::::::
+    //:: CARTEL VERDE ::
+
+movz x10, 0xFF00, lsl 16
+movk x10, 0xFF0, lsl 0
+// ===== LETRA O =====
+
+mov x1, #360
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #372
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #363
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #363
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+
+// ===== LETRA D =====
+mov x1, #386
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #389
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #389
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #398
+mov x2, #56
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+
+// ===== LETRA C =====
+mov x1, #410
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #413
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #413
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+// ===== NÚMERO 2 =====
+mov x1, #360
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #369
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #360
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 0 =====
+mov x1, #375
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #387
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #378
+mov x2, #68
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #375
+mov x2, #80
+mov x3, #15
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 2 =====
+mov x1, #395
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #404
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #395
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 5 =====
+mov x1, #410
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #410
+mov x2, #68
+mov x3, #3
+mov x4, #6
+bl rectangulo
+
+mov x1, #410
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #419
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #410
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo 
 
     // Delay rápido
     movz x0, 0x1800, lsl 16
@@ -2851,6 +2857,204 @@ loop_animacion:
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
+    //::::::::::::::
+    //:: CARTEL CIAN
+
+movz x10, 0xFF00, lsl 16
+movk x10, 0xFFFF, lsl 0
+// ===== LETRA O =====
+
+mov x1, #360
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #372
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #363
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #363
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+
+// ===== LETRA D =====
+mov x1, #386
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #389
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #389
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #398
+mov x2, #56
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+
+// ===== LETRA C =====
+mov x1, #410
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #413
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #413
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+// ===== NÚMERO 2 =====
+mov x1, #360
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #369
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #360
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 0 =====
+mov x1, #375
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #387
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #378
+mov x2, #68
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #375
+mov x2, #80
+mov x3, #15
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 2 =====
+mov x1, #395
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #404
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #395
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 5 =====
+mov x1, #410
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #410
+mov x2, #68
+mov x3, #3
+mov x4, #6
+bl rectangulo
+
+mov x1, #410
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #419
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #410
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
     bl delay
@@ -2976,6 +3180,204 @@ loop_animacion:
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
+    //:::::::::::
+    // CARTEL FUCCIA
+
+movz x10, 0xFFFF, lsl 16
+movk x10, 0x00FF, lsl 0
+// ===== LETRA O =====
+
+mov x1, #360
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #372
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #363
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #363
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+
+// ===== LETRA D =====
+mov x1, #386
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #389
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #389
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #398
+mov x2, #56
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+
+// ===== LETRA C =====
+mov x1, #410
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #413
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #413
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+// ===== NÚMERO 2 =====
+mov x1, #360
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #369
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #360
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 0 =====
+mov x1, #375
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #387
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #378
+mov x2, #68
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #375
+mov x2, #80
+mov x3, #15
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 2 =====
+mov x1, #395
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #404
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #395
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 5 =====
+mov x1, #410
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #410
+mov x2, #68
+mov x3, #3
+mov x4, #6
+bl rectangulo
+
+mov x1, #410
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #419
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #410
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
     bl delay
@@ -3099,7 +3501,206 @@ loop_animacion:
     mov x7, #4                   // radio vertical (radY)                          ::
     movz x10, 0xFF00, lsl 16      // parte alta del color (ej. gris)                ::
     movk x10, 0x0000, lsl 0  
-    bl circulo                    // llamada a función   
+    bl circulo                    // llamada a función
+
+
+//:::::::::::::::::
+//:: CARTEL AZUL
+
+movz x10, 0xFF00, lsl 16
+movk x10, 0xAFFF, lsl 0
+// ===== LETRA O =====
+
+mov x1, #360
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #372
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #363
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #363
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+
+// ===== LETRA D =====
+mov x1, #386
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #389
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #389
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #398
+mov x2, #56
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+
+// ===== LETRA C =====
+mov x1, #410
+mov x2, #53
+mov x3, #3
+mov x4, #10
+bl rectangulo
+
+mov x1, #413
+mov x2, #53
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #413
+mov x2, #60
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+// ===== NÚMERO 2 =====
+mov x1, #360
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #369
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #360
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #360
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 0 =====
+mov x1, #375
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #387
+mov x2, #68
+mov x3, #3
+mov x4, #12
+bl rectangulo
+
+mov x1, #378
+mov x2, #68
+mov x3, #9
+mov x4, #3
+bl rectangulo
+
+mov x1, #375
+mov x2, #80
+mov x3, #15
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 2 =====
+mov x1, #395
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #404
+mov x2, #71
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #395
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #395
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+
+// ===== NÚMERO 5 =====
+mov x1, #410
+mov x2, #68
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #410
+mov x2, #68
+mov x3, #3
+mov x4, #6
+bl rectangulo
+
+mov x1, #410
+mov x2, #74
+mov x3, #12
+mov x4, #3
+bl rectangulo
+
+mov x1, #419
+mov x2, #77
+mov x3, #3
+mov x4, #4
+bl rectangulo
+
+mov x1, #410
+mov x2, #80
+mov x3, #12
+mov x4, #3
+bl rectangulo   
 
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000

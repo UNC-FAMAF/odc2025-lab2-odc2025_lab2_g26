@@ -485,21 +485,6 @@ bl rectangulo
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
     bl rectangulo   
 
-    //luz
-
-        
-    movz x10, 0xFFFF, lsl 16      // parte alta del color (ej. gris)                ::
-    movk x10, 0x0000, lsl 0       // parte baja del color (ej. gris)                ::
-
-
-    mov x3, #336                  // coordenada X del centro                        ::
-    mov x16, #70                 // coordenada Y del centro                        ::
-    mov x4, #4                   // radio horizontal (radX)                        ::
-    mov x7, #4                   // radio vertical (radY)                          ::
-    bl circulo                    // llamada a función   
-
-
-
 
 
 	//:::::::::ventanas fila 1::::::::::::::::::
@@ -2707,6 +2692,8 @@ gatito:
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+
+
 .global animacion
 animacion:
 loop_animacion:
@@ -2727,6 +2714,17 @@ loop_animacion:
     mov x3, 4
     mov x4, 4
     bl rectangulo
+
+    /////////////////////////
+    // LUZ ROJA            //
+    ////////////////////////
+    mov x3, #336                  // coordenada X del centro                        ::
+    mov x16, #70                 // coordenada Y del centro                        ::
+    mov x4, #4                   // radio horizontal (radX)                        ::
+    mov x7, #4                   // radio vertical (radY)                          ::
+    movz x10, 0xFFFF, lsl 16      // parte alta del color (ej. gris)                ::
+    movk x10, 0x0000, lsl 0  
+    bl circulo                    // llamada a función   
 
     // Delay rápido
     movz x0, 0x1800, lsl 16
@@ -2842,6 +2840,17 @@ loop_animacion:
     mov x4, 4
     bl rectangulo
 
+    /////////////////////////
+    // LUZ NEGRA            //
+    ////////////////////////
+    mov x3, #336                  // coordenada X del centro                        ::
+    mov x16, #70                 // coordenada Y del centro                        ::
+    mov x4, #4                   // radio horizontal (radX)                        ::
+    mov x7, #4                   // radio vertical (radY)                          ::
+    movz x10, 0xFF00, lsl 16      // parte alta del color (ej. gris)                ::
+    movk x10, 0x0000, lsl 0  
+    bl circulo                    // llamada a función   
+
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
     bl delay
@@ -2955,6 +2964,17 @@ loop_animacion:
     mov x3, 4
     mov x4, 4
     bl rectangulo
+
+        /////////////////////////
+    // LUZ roja            //
+    ////////////////////////
+    mov x3, #336                  // coordenada X del centro                        ::
+    mov x16, #70                 // coordenada Y del centro                        ::
+    mov x4, #4                   // radio horizontal (radX)                        ::
+    mov x7, #4                   // radio vertical (radY)                          ::
+    movz x10, 0xFFFF, lsl 16      // parte alta del color (ej. gris)                ::
+    movk x10, 0x0000, lsl 0  
+    bl circulo                    // llamada a función   
 
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
@@ -3070,6 +3090,17 @@ loop_animacion:
     mov x4, 2
     bl rectangulo
 
+        /////////////////////////
+    // LUZ NEGRA            //
+    ////////////////////////
+    mov x3, #336                  // coordenada X del centro                        ::
+    mov x16, #70                 // coordenada Y del centro                        ::
+    mov x4, #4                   // radio horizontal (radX)                        ::
+    mov x7, #4                   // radio vertical (radY)                          ::
+    movz x10, 0xFF00, lsl 16      // parte alta del color (ej. gris)                ::
+    movk x10, 0x0000, lsl 0  
+    bl circulo                    // llamada a función   
+
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
     bl delay
@@ -3184,6 +3215,17 @@ loop_animacion:
     mov x4, 2
     bl rectangulo
 
+        /////////////////////////
+    // LUZ roja           //
+    ////////////////////////
+    mov x3, #336                  // coordenada X del centro                        ::
+    mov x16, #70                 // coordenada Y del centro                        ::
+    mov x4, #4                   // radio horizontal (radX)                        ::
+    mov x7, #4                   // radio vertical (radY)                          ::
+    movz x10, 0xFFFF, lsl 16      // parte alta del color (ej. gris)                ::
+    movk x10, 0x0000, lsl 0  
+    bl circulo                    // llamada a función   
+
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
     bl delay
@@ -3290,3 +3332,4 @@ loop_animacion:
 
     // Volver al loop
     b loop_animacion
+

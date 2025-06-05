@@ -2646,6 +2646,7 @@ gatito:
     mov x4, 4              // Alto
     bl rectangulo
 
+// COLA 
     // Rectángulo NEGRO (0x00000000)
     movz x10, 0x00, lsl 16    // Alpha + Rojo (00)
     movk x10, 0x0000, lsl 00   // Verde + Azul (00)

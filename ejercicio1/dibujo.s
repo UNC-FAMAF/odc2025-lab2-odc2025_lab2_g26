@@ -3098,7 +3098,7 @@ gatito:
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 164              // Coordenada X
-    mov x2, 422        // Coordenada Y
+    mov x2, 421        // Coordenada Y
     mov x3, 4             // Ancho
     mov x4, 8            // Alto
     bl rectangulo

@@ -7,14 +7,18 @@
 	.equ GPIO_GPLEV0,    0x34
 
 	.globl main
+	#include "gatito.s"
 
 main:
 	// x0 contiene la direccion base del framebuffer
  	mov x20, x0	// Guarda la dirección base del framebuffer en x20
 	//---------------- CODE HERE ------------------------------------
-
-	movz x10, 0xC7, lsl 16
-	movk x10, 0x1585, lsl 00
+	
+	
+	// Color: 0x000080FF (azul oscuro)
+   movz x10, 0x00, lsl 16
+   movk x10, 0x082F, lsl 00
+    
 
 	mov x2, SCREEN_HEIGH         // Y Size
 loop1:
@@ -45,6 +49,37 @@ loop0:
 	// w11 será 1 si había un 1 en la posición 2 de w10, si no será 0
 	// efectivamente, su valor representará si GPIO 2 está activo
 	lsr w11, w11, 1
+
+	//::::::::::::::::: PARED :::::::::::::::::::::::::::::
+
+    mov x1, #0          // X inicio (ajustado)
+    mov x2, #0         // Y inicio (mismo)
+    mov x3, #640      // ancho (+8 píxeles)
+    mov x4, #480        // altura (igual)
+    movz x10, 0xff02, lsl 16     // color parte alta
+    movk x10, 0x1823 
+
+    bl rectangulo
+
+//:::::::::::::::: SEGUNDA PARED :::::::::::::
+
+
+    mov x1, #50         // X inicio (ajustado)
+    mov x2, #0         // Y inicio (mismo)
+    mov x3, #450   // ancho (+8 píxeles)
+    mov x4, #480        // altura (igual)
+    movz x10, 0xff01, lsl 16     // color parte alta
+    movk x10, 0x2233 
+
+    bl rectangulo
+    
+    
+	bl puente 
+	bl edificio
+	bl lluvia
+	bl interior
+    bl gatito 
+
 
 	//---------------------------------------------------------------
 	// Infinite Loop

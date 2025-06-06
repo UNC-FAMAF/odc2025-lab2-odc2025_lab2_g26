@@ -7,10 +7,10 @@ puente:
 
     //guardo x30
 
-    stp x29, x30, [sp, #-16]!   // guardás el frame anterior y x30
-mov x29, sp                 // nuevo frame pointer
+    stp x29, x30, [sp, #-16]!   // guardo el frame anterior y x30
+    mov x29, sp                 
 
-	//::::: LINEA BAJA HORIZONTAL ::::
+	//::::: LINEA BAJA HORIZONTAL DEL PUENTE::::
 	mov x0, x20              // framebuffer base                        
 	mov x1, #100             // coordenada X (Esquina superior izq)     
 	mov x2, #300              // coordenada Y (esquina superior izq)     
@@ -22,9 +22,7 @@ mov x29, sp                 // nuevo frame pointer
 
     //::::::::::::::::::::::::::::AUTOS::::::::::::::::::::
 
-    //...... RECTANGULOS PRINCIPles......
-
-
+    //...... RECTANGULOS PRINCIPALES......
 mov x1, #250             // coordenada X (Esquina superior izq)     ::
 mov x2, #293              // coordenada Y (esquina superior izq)    ::
 mov x3, #15              // ancho                                   ::
@@ -34,16 +32,13 @@ movk x10, 0x0020, lsl 0   // parte baja del color (gris)             ::
 bl rectangulo 
 
 // ...... RECTANGULOS superiores .....
-
 mov x1, #253             // coordenada X (Esquina superior izq)     ::
 mov x2, #288              // coordenada Y (esquina superior izq)    ::
 mov x3, #9              // ancho                                    ::
 mov x4, #5              // altura                                   ::
 bl rectangulo 
 
-
 // ...........LUCES AUTO ........
-
 mov x0, x20              // framebuffer base                        ::
 mov x1, #250             // coordenada X (Esquina superior izq)     ::
 mov x2, #293              // coordenada Y (esquina superior izq)     ::
@@ -53,22 +48,18 @@ movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
 movk x10, 0xFF00, lsl 0   // parte baja del color                    ::
 bl rectangulo 
 
-
     //::::::::::::::::::TERMINARON LOS AUTOS::::::::::::::::
 
 
-	//::::::::SEGUNDA LINEA HORIZONTAL::::  
+	//::::::::SEGUNDA LINEA HORIZONTAL DEL PUENTE::::  
 	mov x0, x20              // framebuffer base                        
 	mov x1, #100             // coordenada X (Esquina superior izq)     
 	mov x2, #292              // coordenada Y (esquina superior izq)     
 	mov x3, #320              // ancho                                   
 	mov x4, #3              // altura 
-    movz x10, 0xFF00, lsl 16  // parte alta del color                    
+        movz x10, 0xFF00, lsl 16  // parte alta del color                    
 	movk x10, 0x0020, lsl 0   // parte baja del color                                                    
 	bl rectangulo
-
-
-
 
 	//:::::: BARANDA (parte alta)::::::::
 	mov x0, x20              // framebuffer base                        
@@ -94,15 +85,13 @@ bl rectangulo
 	mov x4, #50              // altura                                                    
 	bl rectangulo
 
-
-	//:::::::BARANDA (uniones horizontales 1):::::::: (deberia poner un ciclo para esto despues)
-
+	//:::::::BARANDA (uniones horizontales):::::::: 
     mov x0, x20              // framebuffer base                        ::
     mov x1, #200             // coordenada X (Esquina superior izq)     ::
     mov x2, #310              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #2              // altura                                  ::
-	mov x13, #5                // cantidad de rectangulos 
+    mov x13, #5                // cantidad de rectangulos 
 
 	baranda_loop:
     bl rectangulo 
@@ -113,8 +102,7 @@ bl rectangulo
 	//::::::::::::::: BARANDA (LA SOGA) (son 5 rectanguos) (PARTE 1)::::::://
 
 	//rectangulo 1
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #100             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -124,8 +112,7 @@ bl rectangulo
     bl rectangulo    
 
 		//rectangulo 2
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #120             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -133,8 +120,7 @@ bl rectangulo
     bl rectangulo 
 
 		//rectangulo 3
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #140             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -142,8 +128,7 @@ bl rectangulo
     bl rectangulo 
 
 		//rectangulo 4
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #160             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -151,8 +136,7 @@ bl rectangulo
     bl rectangulo 
 
 		//rectangulo 5
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #180             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -162,8 +146,7 @@ bl rectangulo
 	//::::::::::::::: BARANDA (LA SOGA) (son 5 rectanguos) (PARTE 2)::::::://
 
 	//rectangulo 1
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #220             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -171,8 +154,7 @@ bl rectangulo
     bl rectangulo    
 
 		//rectangulo 2
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #240             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -180,8 +162,7 @@ bl rectangulo
     bl rectangulo 
 
 		//rectangulo 3
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #260             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -189,8 +170,7 @@ bl rectangulo
     bl rectangulo 
 
 		//rectangulo 4
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #280             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -198,16 +178,15 @@ bl rectangulo
     bl rectangulo 
 
 		//rectangulo 5
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #300             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-    ldp x29, x30, [sp], #16     // restaurás lo que guardaste
-ret                         // ahora sí, volvé tranquilo
+    ldp x29, x30, [sp], #16     // restauro lo que guarde
+ret                         
 
 
   	//::::::::::::::::::::::::
@@ -219,16 +198,12 @@ edificio:
 
 //guardo la direccion de retorno
 
-stp x29, x30, [sp, #-16]!   // guardás el frame anterior y x30
-mov x29, sp                 // nuevo frame pointer
+stp x29, x30, [sp, #-16]!   // guardo el frame anterior y x30
+mov x29, sp                 
 
 //:::::::::::::::::::::::::::::::::::::
 //::    CARTEL ODC 2025              ::
 //:::::::::::::::::::::::::::::::::::::
-
-//////////// CARTEL ///////////////
-
-    // Color gris
 
 // ===== RECTÁNGULO CONTENEDOR =====
 mov x1, #345       // x
@@ -238,7 +213,6 @@ mov x4, #40        // alto
 movz x10, 0xFFFF, lsl 16
 movk x10, 0xFFD6, lsl 0
 bl rectangulo
-
 
 movz x10, 0xFF30, lsl 16
 movk x10, 0x0020, lsl 0
@@ -268,7 +242,6 @@ mov x3, #9
 mov x4, #3
 bl rectangulo
 
-
 // ===== LETRA D =====
 mov x1, #386
 mov x2, #53
@@ -293,7 +266,6 @@ mov x2, #56
 mov x3, #3
 mov x4, #4
 bl rectangulo
-
 
 // ===== LETRA C =====
 mov x1, #410
@@ -345,7 +317,6 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
-
 // ===== NÚMERO 0 =====
 mov x1, #375
 mov x2, #68
@@ -370,7 +341,6 @@ mov x2, #80
 mov x3, #15
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 2 =====
 mov x1, #395
@@ -402,7 +372,6 @@ mov x2, #80
 mov x3, #12
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 5 =====
 mov x1, #410
@@ -452,10 +421,9 @@ mov x4, #54
 bl rectangulo
 
 
+	//:::::::rectangulo principal DEL EDIFICIO:::::::::::::::::::
 
-	//:::::::rectangulo principal:::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #300             // coordenada X (Esquina superior izq)     ::
     mov x2, #100              // coordenada Y (esquina superior izq)     ::
     mov x3, #150              // ancho                                   ::
@@ -467,7 +435,6 @@ bl rectangulo
     //::::::::::LUZ ROJA:::::::::::::::::
 
     //soporte
-
     mov x1, #330             // coordenada X (Esquina superior izq)     ::
     mov x2, #85              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -486,33 +453,24 @@ bl rectangulo
     bl rectangulo   
 
     //luz
-
-        
     movz x10, 0xFFFF, lsl 16      // parte alta del color (ej. gris)                ::
     movk x10, 0x0000, lsl 0       // parte baja del color (ej. gris)                ::
-
-
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
     mov x7, #4                   // radio vertical (radY)                          ::
     bl circulo                    // llamada a función   
 
-
-
-
-
 	//:::::::::ventanas fila 1::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaUno_loop:
     bl rectangulo 
@@ -522,15 +480,14 @@ bl rectangulo
 
 	//:::::::::ventanas fila 2::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #360             // coordenada X (Esquina superior izq)     ::
     mov x2, #130              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaDos_loop:
     bl rectangulo 
@@ -538,17 +495,16 @@ bl rectangulo
 	add x2, x2, #14
 	cbnz x13, ventanaDos_loop
 
-		//:::::::::ventanas fila 3::::::::::::::::::
+	//:::::::::ventanas fila 3::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #385             // coordenada X (Esquina superior izq)     ::
     mov x2, #130              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaTres_loop:
     bl rectangulo 
@@ -556,17 +512,16 @@ bl rectangulo
 	add x2, x2, #14
 	cbnz x13, ventanaTres_loop
 
-		//:::::::::ventanas fila 4::::::::::::::::::
+	//:::::::::ventanas fila 4::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #415             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaCuatro_loop:
     bl rectangulo 
@@ -579,7 +534,7 @@ bl rectangulo
 
 	//:::::::::::: ventana 1 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #150              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -588,9 +543,9 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-		//:::::::::::: ventana 2 ::::::::::::::::::::
+	//:::::::::::: ventana 2 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #210              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -599,9 +554,9 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-		//:::::::::::: ventana 3 ::::::::::::::::::::
+	//:::::::::::: ventana 3 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -610,9 +565,9 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-		//:::::::::::: ventana 4 ::::::::::::::::::::
+	//:::::::::::: ventana 4 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #360             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -621,9 +576,9 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-		//:::::::::::: ventana 5 ::::::::::::::::::::
+	//:::::::::::: ventana 5 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #415             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -632,9 +587,9 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-			//:::::::::::: ventana 6 ::::::::::::::::::::
+	//:::::::::::: ventana 6 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #415             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -648,7 +603,7 @@ bl rectangulo
 
 	//:::::::::::: ventana 1 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #335             // coordenada X (Esquina superior izq)     ::
     mov x2, #150              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
@@ -657,9 +612,9 @@ bl rectangulo
     movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-		//:::::::::::: ventana 2 ::::::::::::::::::::
+	//:::::::::::: ventana 2 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #330             // coordenada X (Esquina superior izq)     ::
     mov x2, #210              // coordenada Y (esquina superior izq)     ::
     mov x3, #8              // ancho                                   ::
@@ -667,9 +622,9 @@ bl rectangulo
           
 	bl rectangulo
 
-		//:::::::::::: ventana 3 ::::::::::::::::::::
+	//:::::::::::: ventana 3 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #340             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
@@ -677,9 +632,9 @@ bl rectangulo
 
 	bl rectangulo
 
-		//:::::::::::: ventana 4 ::::::::::::::::::::
+	//:::::::::::: ventana 4 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #373             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #2              // ancho                                   ::
@@ -687,9 +642,9 @@ bl rectangulo
    
 	bl rectangulo
 
-		//:::::::::::: ventana 5 ::::::::::::::::::::
+	//:::::::::::: ventana 5 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #428             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
@@ -697,9 +652,9 @@ bl rectangulo
    
 	bl rectangulo
 
-			//:::::::::::: ventana 6 ::::::::::::::::::::
+	//:::::::::::: ventana 6 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #420             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #2              // ancho                                   ::
@@ -707,7 +662,7 @@ bl rectangulo
     
 	bl rectangulo
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #425             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #2              // ancho                                   ::
@@ -715,19 +670,22 @@ bl rectangulo
     
 	bl rectangulo
 
-    ldp x29, x30, [sp], #16     // restaurás lo que guardaste
-ret                         // ahora sí, volvé tranquilo
+    ldp x29, x30, [sp], #16     // restauro lo que guarde
+ret                         
 
 
-    //:::::::::::::::::::::::
+        //:::::::::::::::::::::::
 	//:: LLUVIA            ::
 	//:::::::::::::::::::::::
 
 .global lluvia
 lluvia:
 
-stp x29, x30, [sp, #-16]!   // guardás el frame anterior y x30
-mov x29, sp                 // nuevo frame pointer
+stp x29, x30, [sp, #-16]!   // guardo el frame anterior y x30
+mov x29, sp    
+
+    movz x10, 0xFF44, lsl 16
+    movk x10, 0x4444, lsl 0
 
 	// Gota 1
     mov x0, x20
@@ -735,16 +693,7 @@ mov x29, sp                 // nuevo frame pointer
     mov x2, #60     //Y
     mov x3, #2
     mov x4, #10
-    movz x10, 0xFF44, lsl 16
-    movk x10, 0x4444, lsl 0
     bl rectangulo
-
-
-    
-
-
-
-
 
 // Gota 2
    mov x0, x20
@@ -897,8 +846,6 @@ mov x2, #315
 mov x3, #1
 mov x4, #10
 bl rectangulo
-
-
 
 // Gota 21
 mov x0, x20
@@ -1220,14 +1167,11 @@ mov x3, #1
 mov x4, #9
 bl rectangulo
 
-
-
-ldp x29, x30, [sp], #16     // restaurás lo que guardaste
-ret                         // ahora sí, volvé tranquilo
+ldp x29, x30, [sp], #16     // restauro lo que guarde
+ret                         
 
  
     .globl interior
-
 interior:
 
 //::::::::::::::::::::::::::::::::::::::::://
@@ -1244,6 +1188,7 @@ movz x10, 0xFF00, lsl 16
 movk x10, 0x0000, lsl 0
 
 bl rectangulo
+
 //::::::::: marco inf ::::::::::::::
 
 mov x1, #84	// x inicio
@@ -1254,6 +1199,7 @@ movz x10, 0xFF00, lsl 16
 movk x10, 0x0000, lsl 0
 
 bl rectangulo
+
 //::::::::::: marco izq ::::::::::::
 
 mov x1, #84	// x inicio
@@ -1264,6 +1210,7 @@ movz x10, 0xFF00, lsl 16
 movk x10, 0x0000, lsl 0
 
 bl rectangulo
+
 //::::::::::: marco der ::::::::::::
 
 mov x1, #450	// x inicio
@@ -1310,7 +1257,6 @@ bl rectangulo
 
 //:::::::: relleno marco der ::::::::::
 
-
 mov x1, #454	// x inicio
 mov x2, #36	// y inicio
 mov x3, #8	// ancho
@@ -1321,7 +1267,6 @@ movk x10, 0x4262, lsl 0
 bl rectangulo
 
 //:::::::::::: marco cruz :::::::::::::::::::.
-
 	            
     mov x1, #267    // X inicio
     mov x2, #36 // Y inicio
@@ -1333,7 +1278,6 @@ bl rectangulo
     bl rectangulo
 
 //:::::::::::: marco cruz :::::::::::::::::::.
-
 	            
     mov x1, #96    // X inicio
     mov x2, #185 // Y inicio
@@ -1345,7 +1289,6 @@ bl rectangulo
     bl rectangulo
 
 //:::::::::::::::::: cruz ventana:::::::::::::::::::
-
 	            
     mov x1, #271    // X inicio
     mov x2, #36 // Y inicio
@@ -1355,7 +1298,6 @@ bl rectangulo
     movk x10, 0x4262 
 
     bl rectangulo
-
 
 //:::::::::::::::::: cruz ventana:::::::::::::::::::
 
@@ -1369,7 +1311,6 @@ bl rectangulo
     bl rectangulo
 
 //////////////////// EXTRA ABRIL //////////////////////////////
-
 
 //bordes pared izq//
 mov x1, #48
@@ -1388,7 +1329,6 @@ mov x4, #480          // alto de la línea
 movz x10, 0xFF00, lsl 16  
 movk x10, 0x0000, lsl 0
 bl rectangulo
-
 
 //calefactor abajo o detalle PARTE 1//
 mov x1, #160
@@ -2333,7 +2273,6 @@ mov x7, #35                   // radio vertical (radY)
 bl circulo                    // llamada a función
 
 // centro reloj
-
 mov x3, #4         // ancho de la línea
 mov x4, #4           // alto de la línea
 movz x10, 0xFF00, lsl 16  
@@ -2422,9 +2361,7 @@ mov x3, 382               // Largo (horizontal)
 mov x4, 30               // Alto (vertical)
 ldr x10, =0x024C69    // Color (azul oscuro)
 
-
 bl paralelogramo_izq
-
 
 /////marco estante /////
 mov x1, #55
@@ -2450,7 +2387,6 @@ movk x10, 0x0000, lsl 0
 bl rectangulo
 
 //marco der
-
 mov x1, #433
 mov x2, #405
 mov x3, #4         // ancho de la línea
@@ -2468,7 +2404,6 @@ ldr x10, =0x000000    // Color (violeta claro)
 
 bl paralelogramo_izq
 
-
 mov x1, 462             // X inicial
 mov x2, 376             // Y inicial
 mov x3, 6               // Largo (horizontal)
@@ -2477,8 +2412,11 @@ ldr x10, =0x000000    // Color (violeta claro)
 bl paralelogramo_izq
 
 
-.global gatito
+//:::::::::::::::::::::::::::::::::
+//::         GATITO              ::
+//:::::::::::::::::::::::::::::::::
 
+.global gatito
 gatito:
     
       // Rectángulo NEGRO (0x00000000)
@@ -2754,8 +2692,6 @@ gatito:
     mov x3, 18            // Ancho
     mov x4, 4          // Alto
     bl rectangulo
-
-
 
 
 // PANZA GRIS:
@@ -3128,7 +3064,9 @@ gatito:
     mov x4, 8            // Alto
     bl rectangulo
 
- //VELA !!
+ //::::::::::::::::::::
+ //::     VELA       ::
+ //::::::::::::::::::::
 
 
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)

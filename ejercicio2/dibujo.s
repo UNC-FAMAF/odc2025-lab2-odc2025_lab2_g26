@@ -7,11 +7,11 @@ puente:
 
     //guardo x30
 
-    stp x29, x30, [sp, #-16]!   // guardás el frame anterior y x30
-mov x29, sp                 // nuevo frame pointer
+    stp x29, x30, [sp, #-16]!   // guardo el frame anterior y x30
+    mov x29, sp                 // nuevo frame pointer
 
 	//::::: LINEA BAJA HORIZONTAL ::::
-	mov x0, x20              // framebuffer base                        
+        mov x0, x20              // framebuffer base                        
 	mov x1, #100             // coordenada X (Esquina superior izq)     
 	mov x2, #300              // coordenada Y (esquina superior izq)     
 	mov x3, #320              // ancho                                   
@@ -20,21 +20,15 @@ mov x29, sp                 // nuevo frame pointer
 	movk x10, 0x0020, lsl 0   // parte baja del color                   
 	bl rectangulo 
 
-    
-
-
 	//::::::::SEGUNDA LINEA HORIZONTAL::::  
 	mov x0, x20              // framebuffer base                        
 	mov x1, #100             // coordenada X (Esquina superior izq)     
 	mov x2, #292              // coordenada Y (esquina superior izq)     
 	mov x3, #320              // ancho                                   
 	mov x4, #3              // altura 
-    movz x10, 0xFF00, lsl 16  // parte alta del color                    
+        movz x10, 0xFF00, lsl 16  // parte alta del color                    
 	movk x10, 0x0020, lsl 0   // parte baja del color                                                    
 	bl rectangulo
-
-
-
 
 	//:::::: BARANDA (parte alta)::::::::
 	mov x0, x20              // framebuffer base                        
@@ -61,17 +55,17 @@ mov x29, sp                 // nuevo frame pointer
 	bl rectangulo
 
 
-	//:::::::BARANDA (uniones horizontales 1):::::::: (deberia poner un ciclo para esto despues)
+	//:::::::BARANDA (uniones horizontales 1)::::::::::::::::::::::::
 
     mov x0, x20              // framebuffer base                        ::
     mov x1, #200             // coordenada X (Esquina superior izq)     ::
     mov x2, #310              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #2              // altura                                  ::
-	mov x13, #5                // cantidad de rectangulos 
+    mov x13, #5                // cantidad de rectangulos 
 
 	baranda_loop:
-    bl rectangulo 
+        bl rectangulo 
 	sub x13, x13, #1
 	add x2, x2, #10
 	cbnz x13, baranda_loop
@@ -80,7 +74,7 @@ mov x29, sp                 // nuevo frame pointer
 
 	//rectangulo 1
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #100             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -89,36 +83,36 @@ mov x29, sp                 // nuevo frame pointer
     movk x10, 0x00AA, lsl 0   // parte baja del color                    ::
     bl rectangulo    
 
-		//rectangulo 2
+      //rectangulo 2
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #120             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-		//rectangulo 3
+      //rectangulo 3
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #140             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-		//rectangulo 4
+     //rectangulo 4
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #160             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-		//rectangulo 5
+     //rectangulo 5
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #180             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -129,51 +123,51 @@ mov x29, sp                 // nuevo frame pointer
 
 	//rectangulo 1
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #220             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo    
 
-		//rectangulo 2
+	//rectangulo 2
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #240             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-		//rectangulo 3
+	//rectangulo 3
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #260             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-		//rectangulo 4
+	//rectangulo 4
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #280             // coordenada X (Esquina superior izq)     ::
     mov x2, #245              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-		//rectangulo 5
+	//rectangulo 5
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #300             // coordenada X (Esquina superior izq)     ::
     mov x2, #240              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #5              // altura                                  ::
     bl rectangulo 
 
-    ldp x29, x30, [sp], #16     // restaurás lo que guardaste
-ret                         // ahora sí, volvé tranquilo
+    ldp x29, x30, [sp], #16     // restauro lo que guarde
+ret                         
 
 
   	//::::::::::::::::::::::::
@@ -185,16 +179,12 @@ edificio:
 
 //guardo la direccion de retorno
 
-stp x29, x30, [sp, #-16]!   // guardás el frame anterior y x30
-mov x29, sp                 // nuevo frame pointer
+stp x29, x30, [sp, #-16]!   // guardo el frame anterior y x30
+mov x29, sp                 
 
 //:::::::::::::::::::::::::::::::::::::
 //::    CARTEL ODC 2025              ::
 //:::::::::::::::::::::::::::::::::::::
-
-//////////// CARTEL ///////////////
-
-    // Color gris
 
 // ===== RECTÁNGULO CONTENEDOR =====
 mov x1, #345       // x
@@ -205,11 +195,10 @@ movz x10, 0xFFFF, lsl 16
 movk x10, 0xFFD6, lsl 0
 bl rectangulo
 
-
 movz x10, 0xFF30, lsl 16
 movk x10, 0x0020, lsl 0
 
-//POSTES DEL CARTEL
+//======POSTES DEL CARTEL========
 
 //Poste 1
 mov x1, #345
@@ -227,9 +216,9 @@ bl rectangulo
 
 
 
-	//:::::::rectangulo principal:::::::::::::::::::
+	//:::::::rectangulo principal del edificio :::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #300             // coordenada X (Esquina superior izq)     ::
     mov x2, #100              // coordenada Y (esquina superior izq)     ::
     mov x3, #150              // ancho                                   ::
@@ -263,15 +252,14 @@ bl rectangulo
 
 	//:::::::::ventanas fila 1::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaUno_loop:
     bl rectangulo 
@@ -281,15 +269,14 @@ bl rectangulo
 
 	//:::::::::ventanas fila 2::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #360             // coordenada X (Esquina superior izq)     ::
     mov x2, #130              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaDos_loop:
     bl rectangulo 
@@ -299,15 +286,14 @@ bl rectangulo
 
 		//:::::::::ventanas fila 3::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #385             // coordenada X (Esquina superior izq)     ::
     mov x2, #130              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaTres_loop:
     bl rectangulo 
@@ -317,15 +303,14 @@ bl rectangulo
 
 		//:::::::::ventanas fila 4::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #415             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF33, lsl 16  // parte alta del color                    ::
     movk x10, 0x3333, lsl 0   // parte baja del color                    ::
-	mov x13, #8                // cantidad de rectangulos 
-
+    mov x13, #8                // cantidad de rectangulos 
 
 	ventanaCuatro_loop:
     bl rectangulo 
@@ -333,12 +318,11 @@ bl rectangulo
 	add x2, x2, #14
 	cbnz x13, ventanaCuatro_loop
 
-    ldp x29, x30, [sp], #16     // restaurás lo que guardaste
-ret                         // ahora sí, volvé tranquilo
+    ldp x29, x30, [sp], #16     // restauro lo que guarde
+ret                         
 
 
     .globl interior
-
 interior:
 
 //::::::::::::::::::::::::::::::::::::::::://
@@ -1533,7 +1517,6 @@ mov x3, 382               // Largo (horizontal)
 mov x4, 30               // Alto (vertical)
 ldr x10, =0x024C69    // Color (azul oscuro)
 
-
 bl paralelogramo_izq
 
 
@@ -1588,8 +1571,11 @@ ldr x10, =0x000000    // Color (violeta claro)
 bl paralelogramo_izq
 
 
-.global gatito
+//:::::::::::::::::::::::::::::::
+//::          GATITO           ::
+//:::::::::::::::::::::::::::::::
 
+.global gatito
 gatito:
     
         // Rectángulo NEGRO (0x00000000)
@@ -1864,8 +1850,6 @@ gatito:
     mov x3, 18            // Ancho
     mov x4, 4          // Alto
     bl rectangulo
-
-
 
 
 // PANZA GRIS:
@@ -2318,9 +2302,9 @@ gatito:
     bl rectangulo
 
     
-//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-    //                  ANIMACION
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    //::                  ANIMACION                                  ::
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -2331,16 +2315,16 @@ gatito:
 animacion:
 loop_animacion:
 
-//::::::::::::::::::::://
-// PARTE UNO
-//::::::::::::::::::::
+//:::::::::::::::::::::
+//:: PARTE UNO       ::
+//:::::::::::::::::::::
 
 
-
-
-    ///////////////////////////
-    // FRAME 1 - llama centrada
-    ///////////////////////////
+     //============FRAME UNO ================
+     
+    //////////////////////////////
+    // llama centrada           //
+    //////////////////////////////
 
     ldr x10, =0x80FFFF00
     mov x1, 264
@@ -2367,9 +2351,10 @@ loop_animacion:
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función  
 
-    //::::::::::::::::::::::::
-    //:: CARTEL VERDE ::
-
+    /////////////////////
+    // CARTEL VERDE    //
+    /////////////////////
+    
 movz x10, 0xFF00, lsl 16
 movk x10, 0xFF0, lsl 0
 // ===== LETRA O =====
@@ -2570,31 +2555,32 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
+    //=================FRAME DOS ====================
+
     	//:::::::::::: ventana 1 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #150              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
     mov x4, #15              // altura                                  ::
     movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
+    bl rectangulo
 
     	//:::::::::::: ventana 1 FOCO ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #335             // coordenada X (Esquina superior izq)     ::
     mov x2, #150              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
     mov x4, #2              // altura                                  ::
     movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
     movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
+    bl rectangulo
 
-    // Borrar
-////// fondo de la vela
-    //marco central ventana
+//::::::: borrar - fondo de la vela - marco central ventana :::::::::
+
     mov x1, #267    // X inicio
     mov x2, #310 // Y inicio
     mov x3, #16  // ancho
@@ -2684,7 +2670,7 @@ bl rectangulo
     bl rectangulo
 
     //////////////////////////////////
-    // FRAME 2 - chispa a la izquierda
+    // chispa a la izquierda        //
     //////////////////////////////////
 
     ldr x10, =0x80FFAA00
@@ -2712,9 +2698,10 @@ bl rectangulo
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
-    //::::::::::::::
-    //:: CARTEL CIAN
-
+    //:::::::::::::::::
+    //:: CARTEL CIAN ::
+    //:::::::::::::::::
+    
 movz x10, 0xFF00, lsl 16
 movk x10, 0xFFFF, lsl 0
 // ===== LETRA O =====
@@ -2914,9 +2901,11 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
-    		//:::::::::::: ventana 3 ::::::::::::::::::::
+//====================FRAME TRES=====================
 
-	mov x0, x20              // framebuffer base                        ::
+    	//:::::::::::: ventana 3 ::::::::::::::::::::
+
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -2925,10 +2914,10 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-    		//:::::::::::: ventana 3 FOCO::::::::::::::::::::
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #335             // coordenada X (Esquina superior izq)     ::
-	mov x0, x20              // framebuffer base                        ::
+    	//:::::::::::: ventana 3 FOCO::::::::::::::::::::
+    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
+    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #340             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
@@ -2937,8 +2926,8 @@ bl rectangulo
 	bl rectangulo
 
     		
+//::::::::::: fondo de la vela:::::::::
 
-////// fondo de la vela
     //marco central ventana
     mov x1, #267    // X inicio
     mov x2, #310 // Y inicio
@@ -2948,6 +2937,7 @@ bl rectangulo
     movk x10, 0x0000 
 
     bl rectangulo
+    
     // relleno central ventana
     mov x1, #271    // X inicio
     mov x2, #310 // Y inicio
@@ -2976,7 +2966,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -3019,7 +3008,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -3030,9 +3018,8 @@ bl rectangulo
 
 
     ////////////////////////////////
-    // FRAME 3 - chispa a la derecha
+    // chispa a la derecha        //
     ////////////////////////////////
-
 
     ldr x10, =0x80FFFF33
     mov x1, 268
@@ -3048,9 +3035,9 @@ bl rectangulo
     mov x4, 4
     bl rectangulo
 
-        /////////////////////////
+    /////////////////////////
     // LUZ roja            //
-    ////////////////////////
+    /////////////////////////
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -3059,8 +3046,9 @@ bl rectangulo
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
-    //:::::::::::
-    // CARTEL FUCCIA
+    //::::::::::::::::::::
+    //:: CARTEL FUCCIA  ::
+    //::::::::::::::::::::
 
 movz x10, 0xFFFF, lsl 16
 movk x10, 0x00FF, lsl 0
@@ -3261,7 +3249,10 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
-////// fondo de la vela
+//====================FRAME CUATRO=====================
+
+//::::::: fondo de la vela:::::::::
+
     //marco central ventana
     mov x1, #267    // X inicio
     mov x2, #310 // Y inicio
@@ -3299,7 +3290,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -3342,7 +3332,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -3353,9 +3342,8 @@ bl rectangulo
 
 
     //////////////////////////////////////
-    // FRAME 4 - llama intermitente pequeña
-    ///////////////////////////////////////
-
+    // llama intermitente pequeña       //
+    //////////////////////////////////////
 
     ldr x10, =0x80FF8800
     mov x1, 262
@@ -3371,9 +3359,9 @@ bl rectangulo
     mov x4, 2
     bl rectangulo
 
-        /////////////////////////
+    //////////////////////////
     // LUZ NEGRA            //
-    ////////////////////////
+    //////////////////////////
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -3384,7 +3372,8 @@ bl rectangulo
 
 
 //:::::::::::::::::
-//:: CARTEL AZUL
+//:: CARTEL AZUL ::
+//:::::::::::::::::
 
 movz x10, 0xFF00, lsl 16
 movk x10, 0xAFFF, lsl 0
@@ -3414,7 +3403,6 @@ mov x3, #9
 mov x4, #3
 bl rectangulo
 
-
 // ===== LETRA D =====
 mov x1, #386
 mov x2, #53
@@ -3439,7 +3427,6 @@ mov x2, #56
 mov x3, #3
 mov x4, #4
 bl rectangulo
-
 
 // ===== LETRA C =====
 mov x1, #410
@@ -3491,7 +3478,6 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
-
 // ===== NÚMERO 0 =====
 mov x1, #375
 mov x2, #68
@@ -3516,7 +3502,6 @@ mov x2, #80
 mov x3, #15
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 2 =====
 mov x1, #395
@@ -3548,7 +3533,6 @@ mov x2, #80
 mov x3, #12
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 5 =====
 mov x1, #410
@@ -3585,7 +3569,9 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
-////// fondo de la vela/////////
+    //=======================FRAME CINCO======================
+
+//::::::::: fondo de la vela:::::::::
 
     //marco central ventana
     mov x1, #267    // X inicio
@@ -3624,7 +3610,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -3667,7 +3652,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -3678,8 +3662,8 @@ bl rectangulo
 
 
     ///////////////////////////////////
-    // FRAME 5 - centelleo en diagonal
-    //////////////////////////////////
+    // centelleo en diagonal         //
+    ///////////////////////////////////
 
     ldr x10, =0x80FF5500
     mov x1, 266
@@ -3695,7 +3679,7 @@ bl rectangulo
     mov x4, 2
     bl rectangulo
 
-        /////////////////////////
+    ////////////////////////
     // LUZ roja           //
     ////////////////////////
     mov x3, #336                  // coordenada X del centro                        ::
@@ -3708,7 +3692,7 @@ bl rectangulo
 
     		//:::::::::::: ventana 4 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #360             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #20              // ancho                                   ::
@@ -3719,9 +3703,9 @@ bl rectangulo
 
     
 		//:::::::::::: ventana 4 FOCO ::::::::::::::::::::
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #335             // coordenada X (Esquina superior izq)     ::
-	mov x0, x20              // framebuffer base                        ::
+    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
+    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #373             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
     mov x3, #2              // ancho                                   ::
@@ -3741,7 +3725,7 @@ bl rectangulo
     bl rectangulo
 
 
-////// fondo de la vela/////////
+//:::::::: fondo de la vela:::::::::::
 
     //marco central ventana
     mov x1, #267    // X inicio
@@ -3752,6 +3736,7 @@ bl rectangulo
     movk x10, 0x0000 
 
     bl rectangulo
+    
     // relleno central ventana
     mov x1, #271    // X inicio
     mov x2, #310 // Y inicio
@@ -3780,7 +3765,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -3834,14 +3818,14 @@ bl rectangulo
 
 
     //:::::::::::::::::::::::::::::::::::
-    //::         PARTE DOOS
+    //::         PARTE DOOS            ::
     //:::::::::::::::::::::::::::::::::::
 
+//====================FRAME UNO ==============
 
-
-        ///////////////////////////
-    // FRAME 1 - llama centrada
-    ///////////////////////////
+    /////////////////////////
+    // llama centrada      //
+    /////////////////////////
 
     ldr x10, =0x80FFFF00
     mov x1, 264
@@ -3859,7 +3843,7 @@ bl rectangulo
 
     /////////////////////////
     // LUZ ROJA            //
-    ////////////////////////
+    /////////////////////////
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -3869,7 +3853,8 @@ bl rectangulo
     bl circulo                    // llamada a función  
 
     //::::::::::::::::::::::::
-    //:: CARTEL VERDE ::
+    //:: CARTEL VERDE       ::
+    //::::::::::::::::::::::::
 
 movz x10, 0xFF00, lsl 16
 movk x10, 0xFF0, lsl 0
@@ -3899,7 +3884,6 @@ mov x3, #9
 mov x4, #3
 bl rectangulo
 
-
 // ===== LETRA D =====
 mov x1, #386
 mov x2, #53
@@ -3924,7 +3908,6 @@ mov x2, #56
 mov x3, #3
 mov x4, #4
 bl rectangulo
-
 
 // ===== LETRA C =====
 mov x1, #410
@@ -3976,7 +3959,6 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
-
 // ===== NÚMERO 0 =====
 mov x1, #375
 mov x2, #68
@@ -4001,7 +3983,6 @@ mov x2, #80
 mov x3, #15
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 2 =====
 mov x1, #395
@@ -4033,7 +4014,6 @@ mov x2, #80
 mov x3, #12
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 5 =====
 mov x1, #410
@@ -4071,9 +4051,9 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
-    // Borrar
-////// fondo de la vela
-    //marco central ventana
+//============== FRAME DOS =================
+
+    //::::::::: Borrar - fondo de la vela - marco central ventana
     mov x1, #267    // X inicio
     mov x2, #310 // Y inicio
     mov x3, #16  // ancho
@@ -4109,7 +4089,6 @@ bl rectangulo
     mov x3, 36            // Ancho
     mov x4, 4            // Alto
     bl rectangulo
-
     
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
@@ -4153,7 +4132,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -4163,7 +4141,7 @@ bl rectangulo
     bl rectangulo
 
     //////////////////////////////////
-    // FRAME 2 - chispa a la izquierda
+    // chispa a la izquierda        //
     //////////////////////////////////
 
     ldr x10, =0x80FFAA00
@@ -4181,8 +4159,9 @@ bl rectangulo
     bl rectangulo
 
     /////////////////////////
-    // LUZ NEGRA            //
-    ////////////////////////
+    // LUZ NEGRA           //
+    /////////////////////////
+    
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -4191,9 +4170,10 @@ bl rectangulo
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
-    //::::::::::::::
-    //:: CARTEL CIAN
-
+    //:::::::::::::::::
+    //:: CARTEL CIAN ::
+    //:::::::::::::::::
+    
 movz x10, 0xFF00, lsl 16
 movk x10, 0xFFFF, lsl 0
 // ===== LETRA O =====
@@ -4222,7 +4202,6 @@ mov x3, #9
 mov x4, #3
 bl rectangulo
 
-
 // ===== LETRA D =====
 mov x1, #386
 mov x2, #53
@@ -4247,7 +4226,6 @@ mov x2, #56
 mov x3, #3
 mov x4, #4
 bl rectangulo
-
 
 // ===== LETRA C =====
 mov x1, #410
@@ -4299,7 +4277,6 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
-
 // ===== NÚMERO 0 =====
 mov x1, #375
 mov x2, #68
@@ -4324,7 +4301,6 @@ mov x2, #80
 mov x3, #15
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 2 =====
 mov x1, #395
@@ -4356,7 +4332,6 @@ mov x2, #80
 mov x3, #12
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 5 =====
 mov x1, #410
@@ -4395,7 +4370,7 @@ bl rectangulo
 
     		//:::::::::::: ventana 5 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #415             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -4405,11 +4380,11 @@ bl rectangulo
 	bl rectangulo
 
     		//:::::::::::: ventana 5 FOCO ::::::::::::::::::::
-      	mov x0, x20              // framebuffer base                        ::
+    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
+    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #335             // coordenada X (Esquina superior izq)     ::
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #335             // coordenada X (Esquina superior izq)     ::
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #428             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
     mov x3, #3              // ancho                                   ::
@@ -4417,7 +4392,8 @@ bl rectangulo
    
 	bl rectangulo
 
-////// fondo de la vela
+//::::::: fondo de la vela::::::::::
+
     //marco central ventana
     mov x1, #267    // X inicio
     mov x2, #310 // Y inicio
@@ -4427,6 +4403,7 @@ bl rectangulo
     movk x10, 0x0000 
 
     bl rectangulo
+
     // relleno central ventana
     mov x1, #271    // X inicio
     mov x2, #310 // Y inicio
@@ -4455,7 +4432,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -4498,7 +4474,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -4507,11 +4482,9 @@ bl rectangulo
     mov x4, 4           // Alto
     bl rectangulo
 
-
     ////////////////////////////////
-    // FRAME 3 - chispa a la derecha
+    // chispa a la derecha        //
     ////////////////////////////////
-
 
     ldr x10, =0x80FFFF33
     mov x1, 268
@@ -4527,9 +4500,10 @@ bl rectangulo
     mov x4, 4
     bl rectangulo
 
-        /////////////////////////
+    /////////////////////////
     // LUZ roja            //
-    ////////////////////////
+    /////////////////////////
+
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -4538,9 +4512,10 @@ bl rectangulo
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
-    //:::::::::::
-    // CARTEL FUCCIA
-
+    //:::::::::::::::::
+    // CARTEL FUCCIA ::
+    //:::::::::::::::::
+    
 movz x10, 0xFFFF, lsl 16
 movk x10, 0x00FF, lsl 0
 // ===== LETRA O =====
@@ -4569,7 +4544,6 @@ mov x3, #9
 mov x4, #3
 bl rectangulo
 
-
 // ===== LETRA D =====
 mov x1, #386
 mov x2, #53
@@ -4594,7 +4568,6 @@ mov x2, #56
 mov x3, #3
 mov x4, #4
 bl rectangulo
-
 
 // ===== LETRA C =====
 mov x1, #410
@@ -4646,7 +4619,6 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
-
 // ===== NÚMERO 0 =====
 mov x1, #375
 mov x2, #68
@@ -4671,7 +4643,6 @@ mov x2, #80
 mov x3, #15
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 2 =====
 mov x1, #395
@@ -4703,7 +4674,6 @@ mov x2, #80
 mov x3, #12
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 5 =====
 mov x1, #410
@@ -4740,7 +4710,10 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
-////// fondo de la vela
+//:::::::::::::::::: FRAME TRES ::::::::::::
+
+//:::::: fondo de la vela::::::::::::
+
     //marco central ventana
     mov x1, #267    // X inicio
     mov x2, #310 // Y inicio
@@ -4750,6 +4723,7 @@ bl rectangulo
     movk x10, 0x0000 
 
     bl rectangulo
+
     // relleno central ventana
     mov x1, #271    // X inicio
     mov x2, #310 // Y inicio
@@ -4778,7 +4752,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -4821,7 +4794,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -4830,11 +4802,9 @@ bl rectangulo
     mov x4, 4           // Alto
     bl rectangulo
 
-
-    //////////////////////////////////////
-    // FRAME 4 - llama intermitente pequeña
-    ///////////////////////////////////////
-
+    //////////////////////////////////
+    // llama intermitente pequeña   //
+    //////////////////////////////////
 
     ldr x10, =0x80FF8800
     mov x1, 262
@@ -4850,9 +4820,10 @@ bl rectangulo
     mov x4, 2
     bl rectangulo
 
-        /////////////////////////
-    // LUZ NEGRA            //
-    ////////////////////////
+    /////////////////////////
+    // LUZ NEGRA           //
+    /////////////////////////
+    
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -4861,9 +4832,9 @@ bl rectangulo
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función
 
-
 //:::::::::::::::::
-//:: CARTEL AZUL
+//:: CARTEL AZUL ::
+//:::::::::::::::::
 
 movz x10, 0xFF00, lsl 16
 movk x10, 0xAFFF, lsl 0
@@ -4893,7 +4864,6 @@ mov x3, #9
 mov x4, #3
 bl rectangulo
 
-
 // ===== LETRA D =====
 mov x1, #386
 mov x2, #53
@@ -4918,7 +4888,6 @@ mov x2, #56
 mov x3, #3
 mov x4, #4
 bl rectangulo
-
 
 // ===== LETRA C =====
 mov x1, #410
@@ -4970,7 +4939,6 @@ mov x3, #12
 mov x4, #3
 bl rectangulo
 
-
 // ===== NÚMERO 0 =====
 mov x1, #375
 mov x2, #68
@@ -4995,7 +4963,6 @@ mov x2, #80
 mov x3, #15
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 2 =====
 mov x1, #395
@@ -5027,7 +4994,6 @@ mov x2, #80
 mov x3, #12
 mov x4, #3
 bl rectangulo
-
 
 // ===== NÚMERO 5 =====
 mov x1, #410
@@ -5064,7 +5030,9 @@ bl rectangulo
     movk x0, 0x0000
     bl delay
 
-////// fondo de la vela/////////
+//====================FRAME CUATRO ====================
+
+//:::::: fondo de la vela ::::::::::.
 
     //marco central ventana
     mov x1, #267    // X inicio
@@ -5075,6 +5043,7 @@ bl rectangulo
     movk x10, 0x0000 
 
     bl rectangulo
+
     // relleno central ventana
     mov x1, #271    // X inicio
     mov x2, #310 // Y inicio
@@ -5103,8 +5072,7 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
-    // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
+       // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
     mov x2, 375        // Coordenada Y
@@ -5146,7 +5114,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -5156,9 +5123,9 @@ bl rectangulo
     bl rectangulo
 
 
-    ///////////////////////////////////
-    // FRAME 5 - centelleo en diagonal
-    //////////////////////////////////
+    //////////////////////////////
+    // centelleo en diagonal    //
+    //////////////////////////////
 
     ldr x10, =0x80FF5500
     mov x1, 266
@@ -5174,9 +5141,10 @@ bl rectangulo
     mov x4, 2
     bl rectangulo
 
-        /////////////////////////
-    // LUZ roja           //
-    ////////////////////////
+    /////////////////////////
+    // LUZ roja            //
+    /////////////////////////
+    
     mov x3, #336                  // coordenada X del centro                        ::
     mov x16, #70                 // coordenada Y del centro                        ::
     mov x4, #4                   // radio horizontal (radX)                        ::
@@ -5185,10 +5153,9 @@ bl rectangulo
     movk x10, 0x0000, lsl 0  
     bl circulo                    // llamada a función   
 
-    
-			//:::::::::::: ventana 6 ::::::::::::::::::::
+    	//:::::::::::: ventana 6 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #415             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -5197,13 +5164,10 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-
-
-			//:::::::::::: ventana 6 FOCO::::::::::::::::::::
-   	mov x0, x20              // framebuffer base                        ::
-    mov x1, #335             // coordenada X (Esquina superior izq)     ::
-
-	mov x0, x20              // framebuffer base                        ::
+	//:::::::::::: ventana 6 FOCO::::::::::::::::::::
+    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
+    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #420             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #2              // ancho                                   ::
@@ -5211,7 +5175,7 @@ bl rectangulo
     
 	bl rectangulo
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #425             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
     mov x3, #2              // ancho                                   ::
@@ -5219,11 +5183,11 @@ bl rectangulo
     
 	bl rectangulo
 
-
-
     movz x0, 0x1800, lsl 16
     movk x0, 0x0000
     bl delay
+
+//================ FRAME CINCO =========================
 
     ldr x10, =0x00404040
     mov x1, 260
@@ -5232,8 +5196,7 @@ bl rectangulo
     mov x4, 14
     bl rectangulo
 
-
-////// fondo de la vela/////////
+//:::::::::::: fondo de la vela:::::::::::::::
 
     //marco central ventana
     mov x1, #267    // X inicio
@@ -5244,6 +5207,7 @@ bl rectangulo
     movk x10, 0x0000 
 
     bl rectangulo
+    
     // relleno central ventana
     mov x1, #271    // X inicio
     mov x2, #310 // Y inicio
@@ -5272,7 +5236,6 @@ bl rectangulo
     mov x4, 4            // Alto
     bl rectangulo
 
-    
     // Rectángulo gris oscuro pero perceptible (0x000C0C0C)
     ldr x10, =0x00121212  // Gris ligeramente más claro  // Un paso más claro    // Alpha (00) + R=0C, G=0C, B=0C
     mov x1, 252              // Coordenada X
@@ -5315,7 +5278,6 @@ bl rectangulo
     mov x4, 20            // Alto
     bl rectangulo
 
-
      // Rectángulo gris medio
     ldr x10, =0x00404040  // Gris medio (más claro que 0x00121212)
     mov x1, 264             // Coordenada X
@@ -5326,7 +5288,7 @@ bl rectangulo
 
     //:::::::::::: ventana 2 ::::::::::::::::::::
 
-	mov x0, x20              // framebuffer base                        ::
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #320             // coordenada X (Esquina superior izq)     ::
     mov x2, #210              // coordenada Y (esquina superior izq)     ::
     mov x3, #30              // ancho                                   ::
@@ -5335,9 +5297,10 @@ bl rectangulo
     movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
 	bl rectangulo
 
-    		//:::::::::::: ventana 2 FOCO ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
+    	//:::::::::::: ventana 2 FOCO ::::::::::::::::::::
+    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
+    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
+    mov x0, x20              // framebuffer base                        ::
     mov x1, #330             // coordenada X (Esquina superior izq)     ::
     mov x2, #210              // coordenada Y (esquina superior izq)     ::
     mov x3, #8              // ancho                                   ::
@@ -5345,25 +5308,8 @@ bl rectangulo
           
 	bl rectangulo
 
-
     // Volver al loop
     b loop_animacion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

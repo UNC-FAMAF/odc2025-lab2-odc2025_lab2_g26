@@ -2926,7 +2926,8 @@ bl rectangulo
 	bl rectangulo
 
     		//:::::::::::: ventana 3 FOCO::::::::::::::::::::
-
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
 	mov x0, x20              // framebuffer base                        ::
     mov x1, #340             // coordenada X (Esquina superior izq)     ::
     mov x2, #300              // coordenada Y (esquina superior izq)     ::
@@ -3718,7 +3719,8 @@ bl rectangulo
 
     
 		//:::::::::::: ventana 4 FOCO ::::::::::::::::::::
-
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
 	mov x0, x20              // framebuffer base                        ::
     mov x1, #373             // coordenada X (Esquina superior izq)     ::
     mov x2, #250              // coordenada Y (esquina superior izq)     ::
@@ -4403,7 +4405,10 @@ bl rectangulo
 	bl rectangulo
 
     		//:::::::::::: ventana 5 FOCO ::::::::::::::::::::
-
+      	mov x0, x20              // framebuffer base                        ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
 	mov x0, x20              // framebuffer base                        ::
     mov x1, #428             // coordenada X (Esquina superior izq)     ::
     mov x2, #120              // coordenada Y (esquina superior izq)     ::
@@ -5195,6 +5200,8 @@ bl rectangulo
 
 
 			//:::::::::::: ventana 6 FOCO::::::::::::::::::::
+   	mov x0, x20              // framebuffer base                        ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
 
 	mov x0, x20              // framebuffer base                        ::
     mov x1, #420             // coordenada X (Esquina superior izq)     ::

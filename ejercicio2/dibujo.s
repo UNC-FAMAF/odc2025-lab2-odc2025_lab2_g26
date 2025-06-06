@@ -20,41 +20,7 @@ mov x29, sp                 // nuevo frame pointer
 	movk x10, 0x0020, lsl 0   // parte baja del color                   
 	bl rectangulo 
 
-    //::::::::::::::::::::::::::::AUTOS::::::::::::::::::::
-
-    //...... RECTANGULOS PRINCIPles......
-
-
-mov x1, #250             // coordenada X (Esquina superior izq)     ::
-mov x2, #293              // coordenada Y (esquina superior izq)    ::
-mov x3, #15              // ancho                                   ::
-mov x4, #7              // altura                                   ::
-movz x10, 0xFF30, lsl 16  // parte alta del color (gris)             ::
-movk x10, 0x0020, lsl 0   // parte baja del color (gris)             ::
-bl rectangulo 
-
-// ...... RECTANGULOS superiores .....
-
-mov x1, #253             // coordenada X (Esquina superior izq)     ::
-mov x2, #288              // coordenada Y (esquina superior izq)    ::
-mov x3, #9              // ancho                                    ::
-mov x4, #5              // altura                                   ::
-bl rectangulo 
-
-
-// ...........LUCES AUTO ........
-
-mov x0, x20              // framebuffer base                        ::
-mov x1, #250             // coordenada X (Esquina superior izq)     ::
-mov x2, #293              // coordenada Y (esquina superior izq)     ::
-mov x3, #3              // ancho                                   ::
-mov x4, #3              // altura                                  ::
-movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
-movk x10, 0xFF00, lsl 0   // parte baja del color                    ::
-bl rectangulo 
-
-
-    //::::::::::::::::::TERMINARON LOS AUTOS::::::::::::::::
+    
 
 
 	//::::::::SEGUNDA LINEA HORIZONTAL::::  
@@ -366,147 +332,6 @@ bl rectangulo
 	sub x13, x13, #1
 	add x2, x2, #14
 	cbnz x13, ventanaCuatro_loop
-
-
-	//////////////   ILUMINACION GENERAL, SON 6 VENTANAS     //////////
-
-	//:::::::::::: ventana 1 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #320             // coordenada X (Esquina superior izq)     ::
-    mov x2, #150              // coordenada Y (esquina superior izq)     ::
-    mov x3, #30              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-		//:::::::::::: ventana 2 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #320             // coordenada X (Esquina superior izq)     ::
-    mov x2, #210              // coordenada Y (esquina superior izq)     ::
-    mov x3, #30              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-		//:::::::::::: ventana 3 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #320             // coordenada X (Esquina superior izq)     ::
-    mov x2, #300              // coordenada Y (esquina superior izq)     ::
-    mov x3, #30              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-		//:::::::::::: ventana 4 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #360             // coordenada X (Esquina superior izq)     ::
-    mov x2, #250              // coordenada Y (esquina superior izq)     ::
-    mov x3, #20              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-		//:::::::::::: ventana 5 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #415             // coordenada X (Esquina superior izq)     ::
-    mov x2, #120              // coordenada Y (esquina superior izq)     ::
-    mov x3, #30              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-			//:::::::::::: ventana 6 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #415             // coordenada X (Esquina superior izq)     ::
-    mov x2, #300              // coordenada Y (esquina superior izq)     ::
-    mov x3, #30              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-	
-    //////////////////////////FOCOS DE LUZ///////////////////////////////
-
-	//:::::::::::: ventana 1 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #335             // coordenada X (Esquina superior izq)     ::
-    mov x2, #150              // coordenada Y (esquina superior izq)     ::
-    mov x3, #3              // ancho                                   ::
-    mov x4, #2              // altura                                  ::
-    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
-    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-		//:::::::::::: ventana 2 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #330             // coordenada X (Esquina superior izq)     ::
-    mov x2, #210              // coordenada Y (esquina superior izq)     ::
-    mov x3, #8              // ancho                                   ::
-    mov x4, #2              // altura                                  ::
-          
-	bl rectangulo
-
-		//:::::::::::: ventana 3 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #340             // coordenada X (Esquina superior izq)     ::
-    mov x2, #300              // coordenada Y (esquina superior izq)     ::
-    mov x3, #3              // ancho                                   ::
-    mov x4, #3              // altura                                  ::
-
-	bl rectangulo
-
-		//:::::::::::: ventana 4 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #373             // coordenada X (Esquina superior izq)     ::
-    mov x2, #250              // coordenada Y (esquina superior izq)     ::
-    mov x3, #2              // ancho                                   ::
-    mov x4, #3              // altura                                  ::
-   
-	bl rectangulo
-
-		//:::::::::::: ventana 5 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #428             // coordenada X (Esquina superior izq)     ::
-    mov x2, #120              // coordenada Y (esquina superior izq)     ::
-    mov x3, #3              // ancho                                   ::
-    mov x4, #3              // altura                                  ::
-   
-	bl rectangulo
-
-			//:::::::::::: ventana 6 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #420             // coordenada X (Esquina superior izq)     ::
-    mov x2, #300              // coordenada Y (esquina superior izq)     ::
-    mov x3, #2              // ancho                                   ::
-    mov x4, #2              // altura                                  ::
-    
-	bl rectangulo
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #425             // coordenada X (Esquina superior izq)     ::
-    mov x2, #300              // coordenada Y (esquina superior izq)     ::
-    mov x3, #2              // ancho                                   ::
-    mov x4, #2              // altura                                  ::
-    
-	bl rectangulo
 
     ldp x29, x30, [sp], #16     // restaurás lo que guardaste
 ret                         // ahora sí, volvé tranquilo
@@ -3933,4 +3758,151 @@ bl rectangulo
 
     // Volver al loop
     b loop_animacion
+
+
+    // DEJO LISTAS LAS VENTANAS PARA ANIMAR DESPUES
+
+//////////////   ILUMINACION GENERAL, SON 6 VENTANAS     //////////
+
+	//:::::::::::: ventana 1 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #320             // coordenada X (Esquina superior izq)     ::
+    mov x2, #150              // coordenada Y (esquina superior izq)     ::
+    mov x3, #30              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+    	//:::::::::::: ventana 1 FOCO ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #335             // coordenada X (Esquina superior izq)     ::
+    mov x2, #150              // coordenada Y (esquina superior izq)     ::
+    mov x3, #3              // ancho                                   ::
+    mov x4, #2              // altura                                  ::
+    movz x10, 0xFFFF, lsl 16  // parte alta del color                    ::
+    movk x10, 0xFF00, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+		//:::::::::::: ventana 2 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #320             // coordenada X (Esquina superior izq)     ::
+    mov x2, #210              // coordenada Y (esquina superior izq)     ::
+    mov x3, #30              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+    		//:::::::::::: ventana 2 FOCO ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #330             // coordenada X (Esquina superior izq)     ::
+    mov x2, #210              // coordenada Y (esquina superior izq)     ::
+    mov x3, #8              // ancho                                   ::
+    mov x4, #2              // altura                                  ::
+          
+	bl rectangulo
+
+		//:::::::::::: ventana 3 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #320             // coordenada X (Esquina superior izq)     ::
+    mov x2, #300              // coordenada Y (esquina superior izq)     ::
+    mov x3, #30              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+    		//:::::::::::: ventana 3 FOCO::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #340             // coordenada X (Esquina superior izq)     ::
+    mov x2, #300              // coordenada Y (esquina superior izq)     ::
+    mov x3, #3              // ancho                                   ::
+    mov x4, #3              // altura                                  ::
+
+	bl rectangulo
+
+		//:::::::::::: ventana 4 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #360             // coordenada X (Esquina superior izq)     ::
+    mov x2, #250              // coordenada Y (esquina superior izq)     ::
+    mov x3, #20              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+    
+		//:::::::::::: ventana 4 FOCO ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #373             // coordenada X (Esquina superior izq)     ::
+    mov x2, #250              // coordenada Y (esquina superior izq)     ::
+    mov x3, #2              // ancho                                   ::
+    mov x4, #3              // altura                                  ::
+   
+	bl rectangulo
+
+		//:::::::::::: ventana 5 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #415             // coordenada X (Esquina superior izq)     ::
+    mov x2, #120              // coordenada Y (esquina superior izq)     ::
+    mov x3, #30              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+    		//:::::::::::: ventana 5 FOCO ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #428             // coordenada X (Esquina superior izq)     ::
+    mov x2, #120              // coordenada Y (esquina superior izq)     ::
+    mov x3, #3              // ancho                                   ::
+    mov x4, #3              // altura                                  ::
+   
+	bl rectangulo
+
+			//:::::::::::: ventana 6 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #415             // coordenada X (Esquina superior izq)     ::
+    mov x2, #300              // coordenada Y (esquina superior izq)     ::
+    mov x3, #30              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+
+
+			//:::::::::::: ventana 6 FOCO::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #420             // coordenada X (Esquina superior izq)     ::
+    mov x2, #300              // coordenada Y (esquina superior izq)     ::
+    mov x3, #2              // ancho                                   ::
+    mov x4, #2              // altura                                  ::
+    
+	bl rectangulo
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #425             // coordenada X (Esquina superior izq)     ::
+    mov x2, #300              // coordenada Y (esquina superior izq)     ::
+    mov x3, #2              // ancho                                   ::
+    mov x4, #2              // altura                                  ::
+    
+	bl rectangulo
+
+
+
+
 

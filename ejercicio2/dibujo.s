@@ -2935,26 +2935,7 @@ bl rectangulo
 
 	bl rectangulo
 
-    		//:::::::::::: ventana 2 ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #320             // coordenada X (Esquina superior izq)     ::
-    mov x2, #210              // coordenada Y (esquina superior izq)     ::
-    mov x3, #30              // ancho                                   ::
-    mov x4, #15              // altura                                  ::
-    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
-    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
-	bl rectangulo
-
-    		//:::::::::::: ventana 2 FOCO ::::::::::::::::::::
-
-	mov x0, x20              // framebuffer base                        ::
-    mov x1, #330             // coordenada X (Esquina superior izq)     ::
-    mov x2, #210              // coordenada Y (esquina superior izq)     ::
-    mov x3, #8              // ancho                                   ::
-    mov x4, #2              // altura                                  ::
-          
-	bl rectangulo
+    		
 
 ////// fondo de la vela
     //marco central ventana
@@ -5335,6 +5316,27 @@ bl rectangulo
     mov x3, 4             // Ancho
     mov x4, 4           // Alto
     bl rectangulo
+
+    //:::::::::::: ventana 2 ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #320             // coordenada X (Esquina superior izq)     ::
+    mov x2, #210              // coordenada Y (esquina superior izq)     ::
+    mov x3, #30              // ancho                                   ::
+    mov x4, #15              // altura                                  ::
+    movz x10, 0xFF55, lsl 16  // parte alta del color                    ::
+    movk x10, 0x5500, lsl 0   // parte baja del color                    :: 
+	bl rectangulo
+
+    		//:::::::::::: ventana 2 FOCO ::::::::::::::::::::
+
+	mov x0, x20              // framebuffer base                        ::
+    mov x1, #330             // coordenada X (Esquina superior izq)     ::
+    mov x2, #210              // coordenada Y (esquina superior izq)     ::
+    mov x3, #8              // ancho                                   ::
+    mov x4, #2              // altura                                  ::
+          
+	bl rectangulo
 
 
     // Volver al loop
